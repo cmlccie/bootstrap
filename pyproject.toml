@@ -1,0 +1,20 @@
+[project]
+name = "bootstrap"
+version = "0.1.0"
+description = "Bootstrap your coding skills to get started with a solid foundation."
+readme = "README.md"
+authors = [
+    { name = "Chris Lunsford", email = "cm@lunsford.io" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.15",
+]
+
+[project.scripts]
+bootstrap = "bootstrap:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
