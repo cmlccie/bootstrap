@@ -34,7 +34,8 @@ Before diving in, consider your current experience level:
 3.  **Programming Language Setup**
 
     === "Python"
-    ```bash # Install Python (3.8+)
+
+    ````bash # Install Python (3.8+)
     python --version
 
         # Install package manager
@@ -57,6 +58,7 @@ Before diving in, consider your current experience level:
 
     === "Other Languages"
     Check the specific installation guides for your chosen language: - [Rust](https://rustup.rs/) - [Go](https://golang.org/dl/) - [Java](https://adoptium.net/)
+    ````
 
 ## 📚 Choose Your Learning Path
 

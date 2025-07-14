@@ -4,9 +4,25 @@
     {
       "label": "Serve MkDocs",
       "type": "shell",
-      "command": "uv run mkdocs serve",
+      "command": "make serve",
       "group": "build",
       "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Build MkDocs",
+      "type": "shell",
+      "command": "make build",
+      "group": "build",
+      "isBackground": false,
+      "problemMatcher": []
+    },
+    {
+      "label": "Setup Project",
+      "type": "shell",
+      "command": "make setup",
+      "group": "build",
+      "isBackground": false,
       "problemMatcher": []
     }
   ]

@@ -7,6 +7,7 @@ Quick reference guides and cheat sheets for common programming concepts, syntax,
 ### Python Quick Reference
 
 #### Basic Syntax
+
 ```python
 # Variables
 name = "Alice"
@@ -27,12 +28,13 @@ class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-    
+
     def introduce(self):
         return f"I'm {self.name}, {self.age} years old"
 ```
 
 #### Common Operations
+
 ```python
 # List operations
 fruits = ["apple", "banana", "orange"]
@@ -56,6 +58,7 @@ with open("output.txt", "w") as f:
 ### JavaScript Quick Reference
 
 #### Basic Syntax
+
 ```javascript
 // Variables
 const name = "Alice";
@@ -69,7 +72,7 @@ const uniqueItems = new Set([1, 2, 3]);
 
 // Functions
 function greet(name) {
-    return `Hello, ${name}!`;
+  return `Hello, ${name}!`;
 }
 
 // Arrow functions
@@ -77,18 +80,19 @@ const multiply = (a, b) => a * b;
 
 // Classes
 class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    
-    introduce() {
-        return `I'm ${this.name}, ${this.age} years old`;
-    }
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  introduce() {
+    return `I'm ${this.name}, ${this.age} years old`;
+  }
 }
 ```
 
 #### DOM Manipulation
+
 ```javascript
 // Selecting elements
 const element = document.getElementById("myId");
@@ -99,8 +103,8 @@ element.textContent = "New text";
 element.innerHTML = "<strong>Bold text</strong>";
 
 // Event handling
-element.addEventListener("click", function() {
-    console.log("Element clicked!");
+element.addEventListener("click", function () {
+  console.log("Element clicked!");
 });
 
 // Creating elements
@@ -112,85 +116,93 @@ document.body.appendChild(newDiv);
 ## 🌐 Web Development
 
 ### HTML Essentials
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Title</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <main>
-        <section id="home">
-            <h1>Welcome</h1>
-            <p>This is a paragraph.</p>
-        </section>
+      <section id="home">
+        <h1>Welcome</h1>
+        <p>This is a paragraph.</p>
+      </section>
     </main>
-    
+
     <footer>
-        <p>&copy; 2023 My Website</p>
+      <p>&copy; 2023 My Website</p>
     </footer>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
 ```
 
 ### CSS Essentials
+
 ```css
 /* Selectors */
-.class-name { }
-#id-name { }
-element { }
-element.class { }
-element > child { }
+.class-name {
+}
+#id-name {
+}
+element {
+}
+element.class {
+}
+element > child {
+}
 
 /* Box Model */
 .box {
-    width: 300px;
-    height: 200px;
-    padding: 20px;
-    border: 2px solid #333;
-    margin: 10px;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border: 2px solid #333;
+  margin: 10px;
 }
 
 /* Flexbox */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Grid */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+  .container {
+    flex-direction: column;
+  }
 }
 ```
 
 ## 🗄️ Database References
 
 ### SQL Basics
+
 ```sql
 -- Create table
 CREATE TABLE users (
@@ -201,7 +213,7 @@ CREATE TABLE users (
 );
 
 -- Insert data
-INSERT INTO users (name, email) VALUES 
+INSERT INTO users (name, email) VALUES
 ('Alice', 'alice@example.com'),
 ('Bob', 'bob@example.com');
 
@@ -217,14 +229,15 @@ UPDATE users SET name = 'Alice Smith' WHERE id = 1;
 DELETE FROM users WHERE id = 2;
 
 -- Joins
-SELECT u.name, p.title 
-FROM users u 
+SELECT u.name, p.title
+FROM users u
 JOIN posts p ON u.id = p.user_id;
 ```
 
 ## 🛠️ Development Tools
 
 ### Git Commands
+
 ```bash
 # Initialize repository
 git init
@@ -258,6 +271,7 @@ git revert commit-hash
 ### Package Managers
 
 #### npm (Node.js)
+
 ```bash
 # Initialize project
 npm init -y
@@ -278,6 +292,7 @@ npm outdated
 ```
 
 #### pip (Python)
+
 ```bash
 # Install packages
 pip install package-name
@@ -298,6 +313,7 @@ deactivate
 ### Unit Testing
 
 #### Python (pytest)
+
 ```python
 import pytest
 
@@ -315,33 +331,36 @@ def test_add_strings():
 ```
 
 #### JavaScript (Jest)
+
 ```javascript
 // math.js
 function add(a, b) {
-    return a + b;
+  return a + b;
 }
 
 // math.test.js
-const { add } = require('./math');
+const { add } = require("./math");
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(add(1, 2)).toBe(3);
+test("adds 1 + 2 to equal 3", () => {
+  expect(add(1, 2)).toBe(3);
 });
 
-test('adds negative numbers', () => {
-    expect(add(-1, -2)).toBe(-3);
+test("adds negative numbers", () => {
+  expect(add(-1, -2)).toBe(-3);
 });
 ```
 
 ## 🔐 Security Best Practices
 
 ### Common Vulnerabilities
+
 - **SQL Injection**: Use parameterized queries
 - **XSS**: Sanitize user input
 - **CSRF**: Use CSRF tokens
 - **Authentication**: Hash passwords, use secure sessions
 
 ### Secure Coding Checklist
+
 - [ ] Validate all user inputs
 - [ ] Use HTTPS for data transmission
 - [ ] Store sensitive data securely
@@ -352,6 +371,7 @@ test('adds negative numbers', () => {
 ## 📊 Performance Tips
 
 ### Frontend Optimization
+
 - Minimize HTTP requests
 - Optimize images and assets
 - Use browser caching
@@ -359,6 +379,7 @@ test('adds negative numbers', () => {
 - Implement lazy loading
 
 ### Backend Optimization
+
 - Database query optimization
 - Implement caching strategies
 - Use CDNs for static assets
@@ -367,4 +388,4 @@ test('adds negative numbers', () => {
 
 ---
 
-*This reference guide is continuously updated with new technologies and best practices.*
+_This reference guide is continuously updated with new technologies and best practices._

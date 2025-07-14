@@ -13,33 +13,31 @@ Short bootstrap lessons to help future developers begin their software developme
    cd bootstrap
    ```
 
-2. **Install dependencies**
+2. **Complete setup**
 
    ```bash
-   # Ensure uv is installed
-   curl -LsSf https://astral.sh/uv/install.sh | sh
-
-   # Install project dependencies
-   uv sync
+   make setup
    ```
 
 3. **Start the development server**
 
    ```bash
-   uv run mkdocs serve
+   make serve
    ```
 
 4. **Open your browser**
    Navigate to [http://localhost:8000](http://localhost:8000)
 
-### Building the Site
+### Available Commands
 
 ```bash
-# Build static site
-uv run mkdocs build
-
-# Build and deploy to GitHub Pages
-uv run mkdocs gh-deploy
+make help     # Show all available commands
+make setup    # Complete project setup
+make serve    # Start development server
+make build    # Build the static site
+make deploy   # Deploy to GitHub Pages
+make clean    # Clean build artifacts
+make check    # Run quality checks
 ```
 
 ## 📚 What's Included
@@ -68,7 +66,7 @@ uv run mkdocs gh-deploy
 
 ## 📝 Content Organization
 
-```
+```text
 docs/
 ├── index.md              # Homepage
 ├── getting-started.md    # Setup and learning paths

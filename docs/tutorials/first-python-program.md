@@ -58,6 +58,7 @@ python hello.py
 ```
 
 **Expected Output:**
+
 ```
 Hello, World!
 Welcome to programming!
@@ -167,15 +168,15 @@ import datetime
 def main():
     print("🤖 Personal Assistant v1.0")
     print("=" * 30)
-    
+
     # Get user information
     name = input("What's your name? ")
     age = int(input("How old are you? "))
-    
+
     # Current time
     now = datetime.datetime.now()
     hour = now.hour
-    
+
     # Time-based greeting
     if hour < 12:
         time_greeting = "Good morning"
@@ -183,9 +184,9 @@ def main():
         time_greeting = "Good afternoon"
     else:
         time_greeting = "Good evening"
-    
+
     print(f"\n{time_greeting}, {name}!")
-    
+
     # Age category
     if age < 18:
         print("You're young and have so much ahead of you!")
@@ -195,14 +196,14 @@ def main():
         print("You're in a great phase of life!")
     else:
         print("Experience is a wonderful teacher!")
-    
+
     # Simple calculator feature
     print("\n📊 Let me help you with a quick calculation:")
     try:
         num1 = float(input("Enter first number: "))
         operation = input("Enter operation (+, -, *, /): ")
         num2 = float(input("Enter second number: "))
-        
+
         if operation == "+":
             result = num1 + num2
         elif operation == "-":
@@ -218,12 +219,12 @@ def main():
         else:
             print("Invalid operation!")
             return
-        
+
         print(f"Result: {num1} {operation} {num2} = {result}")
-        
+
     except ValueError:
         print("Please enter valid numbers!")
-    
+
     print(f"\nThanks for using the assistant, {name}! Have a great day! 🌟")
 
 # Run the program
@@ -246,16 +247,19 @@ Try different inputs and see how the program responds!
 Ready to take your program further? Try these challenges:
 
 ### Challenge 1: Add More Features
+
 - Add a random joke or fact generator
 - Include a simple to-do list feature
 - Add weather-based clothing suggestions
 
 ### Challenge 2: Improve User Experience
+
 - Add colored output using the `colorama` library
 - Create a menu system for different features
 - Add input validation for all user inputs
 
 ### Challenge 3: Data Persistence
+
 - Save user preferences to a file
 - Load previous session data
 - Create a simple user database
@@ -263,18 +267,21 @@ Ready to take your program further? Try these challenges:
 ## 📖 What You've Learned
 
 ✅ **Python Fundamentals:**
+
 - Variables and data types
 - User input and output
 - Conditional statements
 - Basic error handling
 
 ✅ **Programming Concepts:**
+
 - Code organization with functions
 - Program flow and logic
 - Interactive programming
 - Problem-solving approach
 
 ✅ **Best Practices:**
+
 - Clear variable names
 - Code comments
 - Error handling

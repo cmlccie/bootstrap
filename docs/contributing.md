@@ -27,11 +27,11 @@ We welcome various types of contributions:
 2. **Set Up Development Environment**
 
    ```bash
-   # Install dependencies
-   uv sync
+   # Complete setup (installs dependencies)
+   make setup
 
    # Start the development server
-   uv run mkdocs serve
+   make serve
    ```
 
 3. **Create a Branch**
@@ -143,7 +143,7 @@ Before submitting contributions:
 
    ```bash
    # Start the development server
-   uv run mkdocs serve
+   make serve
 
    # Open http://localhost:8000 in your browser
    ```
@@ -152,10 +152,10 @@ Before submitting contributions:
 
    ```bash
    # Build the site to check for issues
-   uv run mkdocs build
+   make build
 
-   # Validate markdown formatting
-   markdownlint docs/
+   # Run all quality checks
+   make check
    ```
 
 3. **Test Code Examples**

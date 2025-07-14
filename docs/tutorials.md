@@ -7,6 +7,7 @@ Welcome to our comprehensive tutorial collection! These hands-on guides will hel
 ### Programming Fundamentals
 
 #### Variables and Data Types
+
 Learn how to store and manipulate different types of data in your programs.
 
 - **Basic Variables**: Strings, numbers, booleans
@@ -14,6 +15,7 @@ Learn how to store and manipulate different types of data in your programs.
 - **Type Conversion**: Converting between data types
 
 #### Control Structures
+
 Master the building blocks of program logic.
 
 - **Conditionals**: if/else statements, switch cases
@@ -23,6 +25,7 @@ Master the building blocks of program logic.
 ### Web Development
 
 #### Frontend Basics
+
 Build interactive user interfaces.
 
 - **HTML**: Structure your web pages
@@ -30,6 +33,7 @@ Build interactive user interfaces.
 - **JavaScript**: Add interactivity
 
 #### Backend Development
+
 Create server-side applications.
 
 - **REST APIs**: Building web services
@@ -39,14 +43,17 @@ Create server-side applications.
 ### Project-Based Tutorials
 
 #### Beginner Projects
+
 Perfect for getting started with programming.
 
 1. **Calculator App**
+
    - Build a simple calculator
    - Practice: Variables, functions, user input
    - Time: 2-3 hours
 
 2. **Todo List**
+
    - Create a task management app
    - Practice: Arrays, loops, DOM manipulation
    - Time: 4-6 hours
@@ -59,6 +66,7 @@ Perfect for getting started with programming.
 #### Intermediate Projects
 
 1. **Blog Platform**
+
    - Full-stack web application
    - Practice: Database design, user authentication
    - Time: 2-3 weeks
@@ -71,6 +79,7 @@ Perfect for getting started with programming.
 #### Advanced Projects
 
 1. **Real-time Chat Application**
+
    - WebSocket implementation
    - Practice: Real-time communication, scalability
    - Time: 3-4 weeks
@@ -83,6 +92,7 @@ Perfect for getting started with programming.
 ## 📚 Step-by-Step Guides
 
 ### Tutorial Format
+
 Each tutorial follows this structure:
 
 1. **Overview**: What you'll build and learn
@@ -93,6 +103,7 @@ Each tutorial follows this structure:
 6. **Extension**: Ideas for further development
 
 ### Code Examples
+
 All tutorials include:
 
 - Complete source code
@@ -105,19 +116,25 @@ All tutorials include:
 ### Choose Your Starting Point
 
 #### Complete Beginner
+
 Start with "Programming Fundamentals" and work through:
+
 1. Variables and Data Types
 2. Control Structures
 3. Your First Project (Calculator App)
 
 #### Some Programming Experience
+
 Jump to project-based tutorials:
+
 1. Todo List (review basics)
 2. Weather App (API practice)
 3. Blog Platform (full-stack)
 
 #### Experienced Developer
+
 Focus on advanced topics:
+
 1. System design tutorials
 2. Performance optimization
 3. Specialized technology stacks
@@ -125,6 +142,7 @@ Focus on advanced topics:
 ### Tutorial Navigation
 
 Use the sidebar to browse tutorials by:
+
 - **Category**: Topic-based organization
 - **Difficulty**: Beginner, Intermediate, Advanced
 - **Technology**: Language/framework specific
@@ -133,18 +151,21 @@ Use the sidebar to browse tutorials by:
 ## 💡 Learning Tips
 
 ### Before Starting
+
 - Read the entire tutorial overview
 - Check prerequisites
 - Set up your development environment
 - Allocate sufficient time
 
 ### While Coding
+
 - Don't just copy-paste code
 - Type everything manually
 - Experiment with variations
 - Take breaks when stuck
 
 ### After Completion
+
 - Test your implementation thoroughly
 - Try the suggested extensions
 - Share your project with others
@@ -153,18 +174,21 @@ Use the sidebar to browse tutorials by:
 ## 🔧 Tools and Resources
 
 ### Development Tools
+
 - Code editors and IDEs
 - Version control (Git)
 - Package managers
 - Debugging tools
 
 ### Online Resources
+
 - Documentation references
 - Stack Overflow for troubleshooting
 - GitHub for example projects
 - Community forums
 
 ### Practice Platforms
+
 - Coding challenges
 - Algorithm practice sites
 - Code review platforms
