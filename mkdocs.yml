@@ -69,11 +69,20 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
-  - Tutorials:
-      - Overview: tutorials.md
-      - Beginner:
-          - First Python Program: tutorials/first-python-program.md
-  - Reference: reference.md
+  - Git:
+      - Overview: git/index.md
+      - Interactive Learning: git/interactive-learning.md
+      - Staging and Commits: git/staging-commits.md
+      - Gitignore: git/gitignore.md
+      - Merge Conflicts: git/merge-conflicts.md
+      - Quick Reference: git/reference.md
+  - Java:
+      - Overview: java/index.md
+      - Development Environment: java/setup.md
+      - Basic Syntax: java/syntax.md
+      - Data Structures: java/data-structures.md
+      - Idiomatic Java: java/idioms.md
+      - Quick Reference: java/reference.md
   - Contributing: contributing.md
 
 # Extra configuration
