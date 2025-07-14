@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+    branches: [main]
+  workflow_call:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install dependencies
+        run: uv sync --extra dev
+
+      - name: Lint Python files
+        run: uv run ruff check .
+        continue-on-error: true
+
+      - name: Lint Markdown files
+        run: |
+          npm install -g markdownlint-cli2
+          markdownlint-cli2 "docs/**/*.md"
+        continue-on-error: true
+
+      - name: Build MkDocs site
+        run: uv run mkdocs build --strict
+        continue-on-error: true
