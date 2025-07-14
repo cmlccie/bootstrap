@@ -14,57 +14,57 @@ Before diving in, consider your current experience level:
 
 ### Essential Tools
 
-1.  **Code Editor**
+1. **Code Editor**
 
-    - [Visual Studio Code](https://code.visualstudio.com/) (recommended)
-    - [JetBrains IDEs](https://www.jetbrains.com/)
-    - [Vim/Neovim](https://neovim.io/)
+   - [Visual Studio Code](https://code.visualstudio.com/) (recommended)
+   - [JetBrains IDEs](https://www.jetbrains.com/)
+   - [Vim/Neovim](https://neovim.io/)
 
-2.  **Version Control**
+2. **Version Control**
 
-    ```bash
-    # Install Git
-    git --version
+   ```bash
+   # Install Git
+   git --version
 
-    # Configure Git (first time setup)
-    git config --global user.name "Your Name"
-    git config --global user.email "your.email@example.com"
-    ```
+   # Configure Git (first time setup)
+   git config --global user.name "Your Name"
+   git config --global user.email "your.email@example.com"
+   ```
 
-3.  **Programming Language Setup**
+3. **Programming Language Setup**
 
-    === "Python"
+   === "Python"
 
-    ````bash # Install Python (3.8+)
-    python --version
+   ````bash # Install Python (3.8+)
+   python --version
 
-        # Install package manager
-        pip install --upgrade pip
+       # Install package manager
+       pip install --upgrade pip
 
-        # Create virtual environment
-        python -m venv myproject
-        source myproject/bin/activate  # On Windows: myproject\Scripts\activate
-        ```
+       # Create virtual environment
+       python -m venv myproject
+       source myproject/bin/activate  # On Windows: myproject\Scripts\activate
+       ```
 
-    === "JavaScript/Node.js"
-    ```bash # Install Node.js
-    node --version
-    npm --version
+   === "JavaScript/Node.js"
+   ```bash # Install Node.js
+   node --version
+   npm --version
 
-        # Alternative: use Node Version Manager
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-        nvm install node
-        ```
+       # Alternative: use Node Version Manager
+       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+       nvm install node
+       ```
 
-    === "Other Languages"
-    Check the specific installation guides for your chosen language: - [Rust](https://rustup.rs/) - [Go](https://golang.org/dl/) - [Java](https://adoptium.net/)
-    ````
+   === "Other Languages"
+   Check the specific installation guides for your chosen language: - [Rust](https://rustup.rs/) - [Go](https://golang.org/dl/) - [Java](https://adoptium.net/)
+   ````
 
 ## 📚 Choose Your Learning Path
 
 ### 🌱 Beginner Path
 
-**Perfect if you're new to programming**
+Perfect if you're new to programming.
 
 1. **Week 1-2**: Programming fundamentals
 
@@ -81,7 +81,7 @@ Before diving in, consider your current experience level:
 
 ### 🚀 Intermediate Path
 
-**For those with basic programming knowledge**
+For those with basic programming knowledge.
 
 1. **Object-Oriented Programming**
 
@@ -99,7 +99,7 @@ Before diving in, consider your current experience level:
 
 ### ⚡ Advanced Path
 
-**For experienced developers expanding skills**
+For experienced developers expanding skills.
 
 1. **System Design**
 

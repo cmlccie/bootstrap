@@ -57,7 +57,7 @@ with open("output.txt", "w") as f:
 
 ### JavaScript Quick Reference
 
-#### Basic Syntax
+#### JavaScript Syntax
 
 ```javascript
 // Variables

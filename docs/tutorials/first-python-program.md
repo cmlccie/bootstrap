@@ -59,7 +59,7 @@ python hello.py
 
 **Expected Output:**
 
-```
+```text
 Hello, World!
 Welcome to programming!
 ```

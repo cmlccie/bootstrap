@@ -35,6 +35,7 @@ We welcome various types of contributions:
    ```
 
 3. **Create a Branch**
+
    ```bash
    git checkout -b feature/your-contribution-name
    ```
@@ -130,6 +131,7 @@ Related resources and advanced topics.
    ```
 
 3. **Pre-commit Hooks**
+
    ```bash
    # Set up pre-commit hooks for code quality
    pre-commit install
@@ -165,7 +167,7 @@ Before submitting contributions:
 
 ### File Organization
 
-```
+```text
 docs/
 ├── index.md              # Homepage
 ├── getting-started.md    # Setup and orientation
@@ -287,7 +289,7 @@ May be invited to become project maintainers with additional responsibilities.
 
 - **GitHub Issues**: For bug reports and feature requests
 - **Discussions**: For questions and community chat
-- **Email**: maintainers@bootstrap-coding-skills.com
+- **Email**: <maintainers@bootstrap-coding-skills.com>
 
 ### Community Guidelines
 

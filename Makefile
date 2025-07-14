@@ -1,6 +1,6 @@
 # Bootstrap Makefile
 
-.PHONY: help setup check-uv install serve build deploy lint-md lint-py format lint test check clean status
+.PHONY: help setup check-uv install serve build deploy lint-md lint-py format-py format-md format lint test check clean status
 .DEFAULT_GOAL := help
 
 help: ## Show available commands
@@ -23,16 +23,29 @@ build: ## Build the site
 deploy: ## Deploy to GitHub Pages
 	uv run mkdocs gh-deploy
 
-lint-md: ## Lint markdown files
-	@command -v markdownlint >/dev/null && markdownlint docs/ || echo "markdownlint not found"
+lint: lint-py lint-md ## Lint all files
 
 lint-py: ## Lint Python files
 	uv run ruff check .
 
-format: ## Format Python files
+lint-md: ## Lint markdown files
+	@if command -v markdownlint-cli2 >/dev/null 2>&1; then \
+		markdownlint-cli2 "docs/**/*.md"; \
+	else \
+		echo "markdownlint-cli2 not found"; \
+	fi
+
+format: format-py format-md ## Format all files
+
+format-py: ## Format Python files
 	uv run ruff format .
 
-lint: lint-md lint-py ## Lint all files
+format-md: ## Format markdown files
+	@if command -v markdownlint-cli2 >/dev/null 2>&1; then \
+		markdownlint-cli2 --fix "docs/**/*.md"; \
+	else \
+		echo "markdownlint-cli2 not found"; \
+	fi
 
 test: build ## Test build
 
