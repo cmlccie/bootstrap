@@ -1,4 +1,4 @@
-site_name: Bootstrap Coding Skills
+site_name: Bootstrap
 site_description: Bootstrap your coding skills to get started with a solid foundation.
 site_author: Chris Lunsford
 site_url: https://cmlccie.github.io/bootstrap/
@@ -45,6 +45,7 @@ theme:
 # Plugins
 plugins:
   - search
+  - open-in-new-tab
 
 # Markdown extensions
 markdown_extensions:
@@ -67,8 +68,11 @@ markdown_extensions:
 
 # Navigation
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
+  - Home:
+    - Bootstrap: index.md
+    - Getting Started: getting-started.md
+    - Problems to Solve: problems-to-solve.md
+    - Continue Learning: continue-learning.md
   - Git:
       - Overview: git/index.md
       - Interactive Learning: git/interactive-learning.md
@@ -83,7 +87,6 @@ nav:
       - Data Structures: java/data-structures.md
       - Idiomatic Java: java/idioms.md
       - Quick Reference: java/reference.md
-  - Contributing: contributing.md
 
 # Extra configuration
 extra:

@@ -1,61 +1,39 @@
-# Bootstrap Coding Skills
+# Bootstrap
 
-Welcome to **Bootstrap Coding Skills** - a learning resource designed specifically for new developers who are just starting their coding journey.
+A learning resource designed to help people get started coding.
 
-## 🎯 Our Mission
+!!! info "Definition"
 
-This site provides simple, minimal, and concise instructions to help you get started with essential development tools and languages. Our goal is to give you a solid foundation of the basics, help you become minimally productive quickly, and then point you toward resources for continued learning.
+    Bootstrap (in computer science) generally refers to the process of starting a system or program with minimal initial code, which then loads or constructs more complex systems. It’s foundational to both hardware (booting up a system) and software (compiling, building, or initializing systems).
 
-!!! note "Learning Philosophy"
-These guides are intentionally basic and focused on getting you started. Think of them as a "bootstrap" - they'll help you take your first steps, but you'll want to continue learning from more comprehensive resources as you grow.
+Here we _bootstrap understanding_ by starting with minimal core concepts that prepare you with a solid foundation for more advanced learning - then point you to additional resources to continue your journey.
 
-## 🛠️ What You'll Learn
+## 🧠 Method
 
-### Git - Version Control Fundamentals
+When learning a new language or tool, you need four things:
 
-Master the basics of version control, the essential tool every developer needs to track changes and collaborate on code.
+1. To understand _what_ it does and _how_ it is _used_.
+2. A functional development environment.
+3. To learn the syntax.
+4. Problems to solve.
 
-- **Interactive Learning** - Visual learning with hands-on exercises
-- **Core Commands** - Adding files, creating commits, and basic workflows
-- **File Management** - Ignoring files and organizing your projects
-- **Collaboration** - Handling merge conflicts when working with others
+Of course there is more to learn to become proficient, and, we'll provide links to resources where you can continue learning. Working through these four activities will _bootstrap_ your understanding and get you start working with new tech.
 
-[Get Started with Git →](git/index.md)
+## 🗒️ Note from the Author
 
-### Java - Programming Language Basics
+I have gone through this process myself countless times - every time I approach learning a new language or learning some new technology! I have found from both my own experience and observing the experiences of others that those who invest time in developing solid foundations understanding the roots and basics of the technologies they employ, go farther and faster than those who only obtain a superficial understanding of high-level concepts. Dive deep - as deep as you need to connect what you are learning to what you already know.
 
-Learn the fundamentals of Java, a powerful and widely-used programming language that's perfect for beginners.
+Invest time to complete your understanding. If you don't know how something works, find out. Have questions? Get answers. When you are satisfied that you could comfortably explain how something works to someone else using your own words and language, then you can probably move on to the next thing you want to understand and employ. Repeat.
 
-- **Environment Setup** - Getting Java running on your computer
-- **Core Syntax** - Variables, data types, and basic programming constructs
-- **Data Structures** - Working with lists, arrays, and collections
-- **Best Practices** - Writing clean, idiomatic Java code
+!!! quote "Chris Lunsford"
 
-[Get Started with Java →](java/index.md)
+    "Things are only complicated until they are understood, then they are simple."
 
 ## 🚀 Ready to Begin?
 
-1. **Start Here**: Read our [Getting Started Guide](getting-started.md) to prepare your learning environment
-2. **Pick Your Path**: Choose Git or Java (or both!) based on your immediate needs
-3. **Learn the Basics**: Follow the lessons in order for the best learning experience
-4. **Keep Going**: Use the resources we recommend to continue your journey
+There is a [Getting Started](getting-started.md) page for that. 😏 Then, choose one of the bootstraps (e.g. Git, Java, etc.) to dive in.
 
-Remember: everyone starts somewhere, and the goal is progress, not perfection. Take your time, practice regularly, and don't be afraid to make mistakes - that's how you learn!
-
-## 📖 Quick Navigation
-
-- [**Git Quick Reference**](git/reference.md) - Essential Git commands and patterns
-- [**Java Quick Reference**](java/reference.md) - Core Java syntax and best practices
-- [**Contributing**](contributing.md) - Help improve these resources
-
-## 💡 Philosophy
-
-Learning to code is a journey, not a destination. This site emphasizes:
-
-- **Practical application** over theoretical knowledge
-- **Building projects** to reinforce learning
-- **Community engagement** and peer learning
-- **Continuous improvement** and lifelong learning
+There are also some general resources, here (see the left navigation bar) to help you as you continue your learning.
 
 ---
 
