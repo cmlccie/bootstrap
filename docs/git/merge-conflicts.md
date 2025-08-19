@@ -239,7 +239,8 @@ git reset --hard abc123
 ```
 
 !!! warning "Use Reset Carefully"
-`git reset --hard` permanently discards changes. Make sure you really want to lose the merge.
+
+    `git reset --hard` permanently discards changes. Make sure you really want to lose the merge.
 
 ## Common Conflict Scenarios
 

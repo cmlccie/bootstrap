@@ -75,8 +75,9 @@ nav:
       - Continue Learning: continue-learning.md
   - Git:
       - Overview: git/index.md
+      - Setup: git/setup.md
       - Interactive Learning: git/interactive-learning.md
-      - Staging and Commits: git/staging-commits.md
+      - Basic Commands: git/basic-commands.md
       - Gitignore: git/gitignore.md
       - Merge Conflicts: git/merge-conflicts.md
       - Quick Reference: git/reference.md

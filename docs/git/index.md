@@ -13,25 +13,31 @@ Git is a version control system that helps you track changes to your code and co
 
 This Git learning path is designed to get you comfortable with the essential Git commands and concepts that you'll use every day as a developer.
 
-### 1. Interactive Learning
+### 1. Setup
+
+Install Git and configure your development environment.
+
+[Setup and Configuration →](setup.md)
+
+### 2. Interactive Learning
 
 Start with visual, hands-on learning to understand how Git works conceptually.
 
 [Learn Git Interactively →](interactive-learning.md)
 
-### 2. Staging and Commits
+### 3. Basic Commands
 
-Learn how to add files to the staging area and create commits using the command line.
+Learn the essential Git commands for daily development work.
 
-[Staging and Commits →](staging-commits.md)
+[Basic Git Commands →](basic-commands.md)
 
-### 3. Gitignore
+### 4. Gitignore
 
 Understand how to tell Git which files to ignore in your projects.
 
 [Working with .gitignore →](gitignore.md)
 
-### 4. Merge Conflicts
+### 5. Merge Conflicts
 
 Learn how to review and resolve conflicts when combining changes.
 
@@ -40,34 +46,13 @@ Learn how to review and resolve conflicts when combining changes.
 ## Prerequisites
 
 - Basic familiarity with the command line
-- A text editor (VS Code, Sublime Text, or similar)
-
-## Installation
-
-Before starting the lessons, make sure Git is installed on your computer:
-
-=== "macOS"
-
-```bash # Check if Git is already installed
-git --version
-
-    # If not installed, install via Homebrew
-    brew install git
-    ```
-
-=== "Windows"
-Download and install from [git-scm.com](https://git-scm.com/download/win)
-
-=== "Linux (Ubuntu/Debian)"
-`bash
-    sudo apt update
-    sudo apt install git
-    `
+- A text editor (e.g. VS Code)
 
 ## Next Steps
 
 Once you've completed these lessons, you'll have a solid foundation in Git. To continue learning:
 
+- [Git Quick Reference →](reference.md) - Essential commands at your fingertips
 - [Pro Git Book](https://git-scm.com/book) - Comprehensive free resource
 - [GitHub's Git Handbook](https://guides.github.com/introduction/git-handbook/) - Additional tutorials
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials) - More advanced concepts

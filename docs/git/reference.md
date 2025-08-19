@@ -1,6 +1,27 @@
 # Git Quick Reference
 
-A concise reference of essential Git commands for daily development work.
+Essential Git commands for daily development work. Keep this handy while learning!
+
+## Daily Workflow Commands
+
+```bash
+# Check status
+git status
+
+# Stage files
+git add filename.txt    # Specific file
+git add .              # All changes
+
+# Commit changes
+git commit -m "Descriptive message"
+
+# View history
+git log --oneline
+
+# See changes
+git diff               # Unstaged changes
+git diff --staged      # Staged changes
+```
 
 ## Setup and Configuration
 

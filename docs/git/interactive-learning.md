@@ -65,7 +65,7 @@ After completing the interactive tutorial, you should understand:
 
 Once you've completed the interactive tutorial and feel comfortable with these concepts, you're ready to start using Git from the command line.
 
-[Next: Staging and Commits →](staging-commits.md)
+[Next: Basic Git Commands →](basic-commands.md)
 
 ## Additional Resources
 
