@@ -69,10 +69,10 @@ markdown_extensions:
 # Navigation
 nav:
   - Home:
-    - Bootstrap: index.md
-    - Getting Started: getting-started.md
-    - Problems to Solve: problems-to-solve.md
-    - Continue Learning: continue-learning.md
+      - Bootstrap: index.md
+      - Getting Started: getting-started.md
+      - Problems to Solve: problems-to-solve.md
+      - Continue Learning: continue-learning.md
   - Git:
       - Overview: git/index.md
       - Interactive Learning: git/interactive-learning.md
@@ -85,7 +85,8 @@ nav:
       - Development Environment: java/setup.md
       - Basic Syntax: java/syntax.md
       - Data Structures: java/data-structures.md
-      - Idiomatic Java: java/idioms.md
+      - Object-Oriented Programming: java/object-oriented.md
+      - Professional Practices: java/idioms.md
       - Quick Reference: java/reference.md
 
 # Extra configuration
