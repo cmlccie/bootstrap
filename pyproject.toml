@@ -1,29 +1,21 @@
 [project]
 name = "bootstrap"
-version = "0.1.0"
-description = "Bootstrap your coding skills to get started with a solid foundation."
+version = "2026.0.0"
+description = "FRC Programming Bootcamp - a six-session bootstrap for new FRC programmers."
 readme = "README.md"
-authors = [
-    { name = "Chris Lunsford", email = "cm@lunsford.io" }
-]
+authors = [{ name = "Chris Lunsford", email = "cm@lunsford.io" }]
 requires-python = ">=3.13"
 dependencies = [
-    "mkdocs>=1.6.1",
-    "mkdocs-material[recommended]>=9.6.15",
+    "mkdocs>=1.6.1,<2",
+    "mkdocs-material[recommended]>=9.7.7",
     "mkdocs-open-in-new-tab>=1.0.8",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "ruff>=0.1.0",
-]
+[dependency-groups]
+dev = ["ruff>=0.16.8"]
 
-[project.scripts]
-bootstrap = "bootstrap:main"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+[tool.uv]
+package = false
 
 [tool.ruff]
 line-length = 88
@@ -31,12 +23,10 @@ target-version = "py313"
 
 [tool.ruff.lint]
 extend-select = [
-    "B",  # flake8-bugbear
-    "I",  # isort
-    "Q",  # flake8-quotes
+    "B", # flake8-bugbear
+    "I", # isort
+    "Q", # flake8-quotes
 ]
-ignore = []
-ignore-init-module-imports = true
 
 [tool.ruff.format]
 quote-style = "double"

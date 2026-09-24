@@ -1,5 +1,5 @@
-site_name: Bootstrap
-site_description: Bootstrap your coding skills to get started with a solid foundation.
+site_name: FRC Programming Bootcamp
+site_description: A six-session bootcamp that bootstraps new FRC programmers - from first commit to code running on a robot.
 site_author: Chris Lunsford
 site_url: https://cmlccie.github.io/bootstrap/
 
@@ -17,22 +17,26 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.top
+    - navigation.footer
+    - navigation.indexes
     - search.highlight
     - search.share
     - toc.follow
     - content.tabs.link
-    - content.code.annotation
+    - content.code.annotate
     - content.code.copy
     - content.action.edit
     - content.action.view
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: indigo
       accent: indigo
       toggle:
@@ -49,54 +53,48 @@ plugins:
 
 # Markdown extensions
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
   - admonition
-  - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
   - attr_list
   - md_in_html
   - tables
   - toc:
       permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 # Navigation
 nav:
-  - Home:
-      - Bootstrap: index.md
-      - Getting Started: getting-started.md
-      - Problems to Solve: problems-to-solve.md
-      - Continue Learning: continue-learning.md
-  - Git:
-      - Overview: git/index.md
-      - Setup: git/setup.md
-      - Interactive Learning: git/interactive-learning.md
-      - Basic Commands: git/basic-commands.md
-      - Gitignore: git/gitignore.md
-      - Merge Conflicts: git/merge-conflicts.md
-      - Quick Reference: git/reference.md
-  - Java:
-      - Overview: java/index.md
-      - Development Environment: java/setup.md
-      - Basic Syntax: java/syntax.md
-      - Data Structures: java/data-structures.md
-      - Object-Oriented Programming: java/object-oriented.md
-      - Professional Practices: java/idioms.md
-      - Quick Reference: java/reference.md
+  - Home: index.md
+  - Session 1:
+      - session-1/index.md
+  - Session 2:
+      - session-2/index.md
+  - Session 3:
+      - session-3/index.md
+  - Session 4:
+      - session-4/index.md
+  - Session 5:
+      - session-5/index.md
+  - Session 6:
+      - session-6/index.md
 
 # Extra configuration
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/cmlccie/bootstrap
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/cmlccie
-  analytics:
-    provider: google
-    property: G-XXXXXXXXXX # Replace with your Google Analytics ID
+      link: https://github.com/gryphoncommand/2026-bootcamp
+      name: Bootcamp code repository
