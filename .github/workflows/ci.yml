@@ -12,29 +12,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v4
+        uses: astral-sh/setup-uv@v10.2.0
         with:
-          version: "latest"
+          enable-cache: true
 
-      - name: Set up Python
-        run: uv python install
+      - name: Check lockfile is up to date
+        run: uv lock --check
 
       - name: Install dependencies
-        run: uv sync --extra dev
-
-      - name: Lint Python files
-        run: uv run ruff check .
-        continue-on-error: true
+        run: uv sync --locked
 
       - name: Lint Markdown files
-        run: |
-          npm install -g markdownlint-cli2
-          markdownlint-cli2 "docs/**/*.md"
-        continue-on-error: true
+        uses: DavidAnson/markdownlint-cli2-action@v24
+        with:
+          globs: "docs/**/*.md"
 
-      - name: Build MkDocs site
+      - name: Build MkDocs site (strict)
         run: uv run mkdocs build --strict
-        continue-on-error: true

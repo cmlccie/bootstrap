@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Serve MkDocs",
+      "label": "Serve site",
       "type": "shell",
       "command": "make serve",
       "group": "build",
@@ -10,19 +10,17 @@
       "problemMatcher": []
     },
     {
-      "label": "Build MkDocs",
+      "label": "Build site",
       "type": "shell",
       "command": "make build",
       "group": "build",
-      "isBackground": false,
       "problemMatcher": []
     },
     {
-      "label": "Setup Project",
+      "label": "Check (lint + build)",
       "type": "shell",
-      "command": "make setup",
-      "group": "build",
-      "isBackground": false,
+      "command": "make check",
+      "group": "test",
       "problemMatcher": []
     }
   ]

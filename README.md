@@ -1,99 +1,45 @@
-# Bootstrap
+# FRC Programming Bootcamp
 
-Short bootstrap lessons to help future developers begin their software development journeys.
+The static site for the 2026 FRC Programming Bootcamp: a six-session course that bootstraps new FRC programmers from their first commit to code running on a robot.
 
-## 🚀 Quick Start
+- **Live site:** <https://cmlccie.github.io/bootstrap/>
+- **Code repository (student exercises):** <https://github.com/gryphoncommand/2026-bootcamp>
+- **Last year's content:** git tag [`2025`](https://github.com/cmlccie/bootstrap/tree/2025)
 
-### Local Development
+## Quick start
 
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/cmlccie/bootstrap.git
-   cd bootstrap
-   ```
-
-2. **Complete setup**
-
-   ```bash
-   make setup
-   ```
-
-3. **Start the development server**
-
-   ```bash
-   make serve
-   ```
-
-4. **Open your browser**
-   Navigate to [http://localhost:8000](http://localhost:8000)
-
-### Available Commands
+Requires [uv](https://docs.astral.sh/uv/).
 
 ```bash
-make help     # Show all available commands
-make setup    # Complete project setup
-make serve    # Start development server
-make build    # Build the static site
-make deploy   # Deploy to GitHub Pages
-make clean    # Clean build artifacts
-make check    # Run quality checks
+git clone https://github.com/cmlccie/bootstrap.git
+cd bootstrap
+make setup
+make serve     # http://127.0.0.1:8000
 ```
 
-## 📚 What's Included
+```bash
+make help      # all commands
+make build     # strict build (same as CI)
+make lint      # markdownlint on docs/
+make check     # lint + build
+```
 
-- **Getting Started Guide**: Development environment setup and learning paths
-- **Comprehensive Tutorials**: Step-by-step programming guides from beginner to advanced
-- **Quick Reference**: Cheat sheets and syntax references for common languages
-- **Contributing Guide**: How to contribute to the documentation
-
-## 🌟 Features
-
-- **Material Design Theme**: Modern, responsive documentation
-- **Search Functionality**: Full-text search across all content
-- **Code Syntax Highlighting**: Multi-language code examples
-- **Mobile Responsive**: Works great on all devices
-- **Dark/Light Mode**: User preference themes
-- **GitHub Integration**: Easy editing and contributions
-
-## 🛠️ Technology Stack
-
-- **[MkDocs](https://www.mkdocs.org/)**: Static site generator
-- **[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)**: Premium theme
-- **[Python uv](https://docs.astral.sh/uv/)**: Fast Python package manager
-- **[GitHub Actions](https://github.com/features/actions)**: Automated deployment
-- **[GitHub Pages](https://pages.github.com/)**: Free hosting
-
-## 📝 Content Organization
+## Structure
 
 ```text
 docs/
-├── index.md              # Homepage
-├── getting-started.md    # Setup and learning paths
-├── tutorials.md          # Programming tutorials
-├── reference.md          # Quick reference guides
-└── contributing.md       # Contribution guidelines
+├── index.md              # Home
+├── session-1/index.md    # One directory per session
+├── ...
+└── session-6/index.md
+mkdocs.yml                # Site configuration and navigation
+.claude/CLAUDE.md         # Goals, constraints, and content conventions for Claude Code
 ```
 
-## 🤝 Contributing
+## Stack
 
-We welcome contributions! Please see our [Contributing Guide](docs/contributing.md) for details on:
+[MkDocs](https://www.mkdocs.org/) with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), managed with [uv](https://docs.astral.sh/uv/), built and deployed to GitHub Pages by GitHub Actions.
 
-- How to submit improvements
-- Content guidelines and standards
-- Development setup instructions
-- Review process
+## License
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔗 Links
-
-- **Live Site**: [https://cmlccie.github.io/bootstrap/](https://cmlccie.github.io/bootstrap/)
-- **Issues**: [GitHub Issues](https://github.com/cmlccie/bootstrap/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/cmlccie/bootstrap/discussions)
-
----
-
-Built with ❤️ to help developers grow their coding skills
+MIT. See [LICENSE](LICENSE).
