@@ -77,7 +77,7 @@ Your program starts once when the roboRIO boots, then runs in a loop about 50 ti
 | Mode | When | What your code does |
 | ---- | ---- | ------------------- |
 | **Disabled** | Whenever the robot is not enabled. Also the state at startup | Nothing moves. Read sensors, update the dashboard |
-| **Autonomous** | First 15 seconds of a match | Runs without driver input |
+| **Autonomous** | First 20 seconds of a match | Runs without driver input |
 | **Teleoperated** | Rest of the match | Follows the driver's joysticks |
 | **Test** | Only from the Driver Station, in the shop | Whatever you set up for checking hardware |
 
