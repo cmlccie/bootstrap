@@ -34,21 +34,32 @@ Last year's (2025) site content is preserved at the git tag `2025`. Use it as so
 
 ## Key constraints to remember
 
-- **Six sessions total.** Agendas must be effective, not rushed. Cut scope before cramming.
+- **Six sessions of 60 to 90 minutes.** Plan for 75 minutes with a 60-minute core and optional stretch material. Cut scope before cramming.
+- **No team name or number in this repository.** Students from other teams may use this site. Where a team number matters (IP addresses, mDNS names, WPILib project settings) use `TE.AM` placeholders and explain how a real number fills them in. Team-specific details live in the `gryphoncommand` organization's repositories.
+- **Students use personal GitHub accounts and their personal free Codespaces quota.** Teach them to use the smallest machine and stop Codespaces when done.
+- **Session 1 has no Java.** Creating a Codespace, a branch, and a pushed commit counts as "running code" on day one. Real robot code starts in session 2.
 - **Codespaces cannot reach the Romi.** Romi code runs on a laptop in WPILib simulation mode and talks to the Romi over its Wi-Fi network (default `10.0.0.2`). Unit tests and builds happen in Codespaces; simulation and Romi runs happen on programming laptops.
 - **One Romi.** Design exercises so students can finish and validate most work without it.
-- **WPILib version:** the current season release (2026.x) until the 2027 release lands at kickoff.
+- **WPILib version:** the current season release (2026.x) until the 2027 release lands at kickoff. Java 17.
+- **The mentor generates the Romi project** with the WPILib VS Code extension (Romi Command Bot template, desktop support enabled). Do not hand-write a WPILib project skeleton; add code to the generated one.
 
 ## Course outline (draft, revise as sessions are developed)
 
-| Session | Working title | Focus |
-| ------- | ------------- | ----- |
-| 1 | The FRC stack and your first commit | Stack overview; GitHub accounts and org; first Codespace; branch, commit, push |
-| 2 | Anatomy of robot code | Timed robot lifecycle; Java essentials in context; first unit test; first pull request |
-| 3 | Subsystems and commands | Command-based structure; subsystems, commands, triggers; Java classes and lambdas |
-| 4 | Test, simulate, tune | Unit tests in depth; simulation on the laptop; AdvantageScope and dashboards |
-| 5 | Networks, Driver Station, and the Romi | IP addressing, radio/FMS, Driver Station; deploy to the Romi and drive it |
-| 6 | Capstone | Teams build an autonomous routine, review each other's PRs, run it on the Romi; next steps |
+| Session | Title | Focus | Where code runs |
+| ------- | ----- | ----- | --------------- |
+| 1 | The FRC Stack and Your First Commit | Hardware, software, and network tour; GitHub account and org; first Codespace; branch, commit, push | Codespace (git only) |
+| 2 | Your First Robot Code | `Robot.java` lifecycle (init and periodic across disabled, autonomous, teleop, test); Java variables, types, and methods through the Romi yellow LED as a makeshift RSL; run unit tests; first pull request | Codespace (unit tests) |
+| 3 | Subsystems and Commands | Command-based structure: subsystems, commands, `RobotContainer`, triggers; Romi buttons drive LEDs; Java classes, objects, lambdas; tests for commands | Codespace (unit tests) |
+| 4 | Simulate It | Drivetrain subsystem and arcade drive; WPILib simulation GUI and keyboard joystick; AdvantageScope; dashboards and NetworkTables; tuning constants | Laptop (simulation) |
+| 5 | Networks, Driver Station, and the Romi | IP addressing and mDNS; radio, FMS, Driver Station; Romi Wi-Fi vs roboRIO; deploy to the Romi and drive it; sensor data in AdvantageScope | Laptop + Romi |
+| 6 | Capstone | Small teams write an autonomous routine (encoders, gyro), review each other's pull requests, run it on the Romi; where to go next | Codespace, laptop, Romi |
+
+Design rules for exercises:
+
+- Every Java exercise is code that deploys to the Romi, even when the session only runs it in unit tests.
+- Teach Java syntax through robot behavior, never through generic examples. Example: booleans and `if` through the RSL-style LED, `double` and math through drive speeds, classes through subsystems.
+- Sessions 2-3 run code in unit tests in Codespaces. Sessions 4-5 add simulation on laptops. Sessions 5-6 deploy to the Romi.
+- The Romi onboard I/O (`OnBoardIO`: green, yellow, and red LEDs; buttons A, B, C) is the safe playground for early exercises because it needs no motors.
 
 ## Site structure
 
@@ -61,7 +72,8 @@ docs/
 └── session-6/index.md
 ```
 
-- Each session is a top-level nav section in `mkdocs.yml`. The session's `index.md` is its landing page (agenda). Add extra pages inside the session directory when a session needs them (for example `session-3/exercises.md`) and add them to the nav.
+- Each session is a top-level nav section in `mkdocs.yml`. The session's `index.md` is its landing page (objectives, agenda, pre-work). Each agenda step that students do hands-on gets its own page in the session directory (see `session-1/`), plus a `reference.md` cheat sheet. Add every page to the nav.
+- Mermaid diagrams render natively (` ```mermaid ` fences). Prefer a small diagram over a paragraph for anything about how components connect.
 - Put images and media in the session directory next to the page that uses them.
 - Use lowercase, hyphenated file names.
 - Do not reintroduce the 2025 site structure (`docs/git/`, `docs/java/`, generic reference pages). Fold reference material into the session that needs it.

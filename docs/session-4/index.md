@@ -1,8 +1,8 @@
-# Session 4
+# Session 4: Simulate It
 
 !!! warning "Coming soon"
 
-    This session is under construction.
+    This session is under construction. Planned focus: drive code, WPILib simulation, AdvantageScope and dashboards.
 
 ## 🎯 Objectives
 

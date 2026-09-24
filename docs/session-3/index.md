@@ -1,8 +1,8 @@
-# Session 3
+# Session 3: Subsystems and Commands
 
 !!! warning "Coming soon"
 
-    This session is under construction.
+    This session is under construction. Planned focus: command-based structure, buttons and triggers, Java classes and lambdas.
 
 ## 🎯 Objectives
 

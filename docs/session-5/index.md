@@ -1,8 +1,8 @@
-# Session 5
+# Session 5: Networks, Driver Station, and the Romi
 
 !!! warning "Coming soon"
 
-    This session is under construction.
+    This session is under construction. Planned focus: how the laptop talks to the robot, deploy to the Romi and drive it.
 
 ## 🎯 Objectives
 

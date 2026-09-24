@@ -15,7 +15,7 @@ Welcome! This six-session bootcamp bootstraps new FRC programmers. By the end, y
 
 ## 🧭 How the bootcamp works
 
-Each session is hands-on. You will write and run code in every session, starting on day one.
+Each session is 60 to 90 minutes and hands-on. You leave every session having made something run, starting on day one.
 
 - **This site** holds the agenda, instructions, and reference material for each session.
 - **The [`2026-bootcamp` repository](https://github.com/gryphoncommand/2026-bootcamp)** holds the code. You will open it in a GitHub Codespace, work on your own branch, and open pull requests.
@@ -25,12 +25,12 @@ Each session is hands-on. You will write and run code in every session, starting
 
 | Session | Topic |
 | ------- | ----- |
-| [Session 1](session-1/index.md) | The FRC stack and your first commit |
-| [Session 2](session-2/index.md) | Coming soon |
-| [Session 3](session-3/index.md) | Coming soon |
-| [Session 4](session-4/index.md) | Coming soon |
-| [Session 5](session-5/index.md) | Coming soon |
-| [Session 6](session-6/index.md) | Coming soon |
+| [Session 1](session-1/index.md) | The FRC Stack and Your First Commit - hardware, software, networks, GitHub, Codespaces, branch, commit, push |
+| [Session 2](session-2/index.md) | Your First Robot Code - robot code lifecycle, Java basics, unit tests, first pull request |
+| [Session 3](session-3/index.md) | Subsystems and Commands - command-based structure, buttons and triggers, Java classes and lambdas |
+| [Session 4](session-4/index.md) | Simulate It - drive code, WPILib simulation, AdvantageScope and dashboards |
+| [Session 5](session-5/index.md) | Networks, Driver Station, and the Romi - how the laptop talks to the robot, deploy to the Romi and drive it |
+| [Session 6](session-6/index.md) | Capstone - autonomous routine, pull request review, run it on the Romi, next steps |
 
 ## 💡 How to get the most out of it
 

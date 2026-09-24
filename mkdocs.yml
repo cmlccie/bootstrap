@@ -70,7 +70,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -81,6 +85,11 @@ nav:
   - Home: index.md
   - Session 1:
       - session-1/index.md
+      - The FRC Stack: session-1/frc-stack.md
+      - GitHub Setup: session-1/github-setup.md
+      - Your First Codespace: session-1/first-codespace.md
+      - Your First Commit: session-1/first-commit.md
+      - Reference: session-1/reference.md
   - Session 2:
       - session-2/index.md
   - Session 3:

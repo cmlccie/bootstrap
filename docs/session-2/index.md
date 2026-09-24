@@ -1,8 +1,8 @@
-# Session 2
+# Session 2: Your First Robot Code
 
 !!! warning "Coming soon"
 
-    This session is under construction.
+    This session is under construction. Planned focus: robot code lifecycle, Java basics, unit tests, first pull request.
 
 ## 🎯 Objectives
 
