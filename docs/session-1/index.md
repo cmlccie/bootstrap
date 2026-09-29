@@ -49,4 +49,4 @@ The [Session 1 Reference](reference.md) has a glossary of every stack term used 
 
 ## ⏭️ Next session
 
-In Session 2 you write your first robot code: the yellow LED on the Romi becomes a makeshift robot signal light, you learn how robot code starts up and runs, and you run your first unit test in your Codespace.
+In Session 2 you write your first robot code: you learn how a robot program starts up and runs in its four modes, read `Robot.java` line by line, add logging, and watch your program run in your Codespace.

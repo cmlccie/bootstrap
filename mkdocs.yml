@@ -92,14 +92,43 @@ nav:
       - Reference: session-1/reference.md
   - Session 2:
       - session-2/index.md
+      - The Routine: session-2/routine.md
+      - Anatomy of Robot Code: session-2/anatomy.md
+      - Reading Java: session-2/java-basics.md
+      - Logging: session-2/logging.md
+      - "Exercise: The Heartbeat": session-2/exercise-heartbeat.md
+      - Java Cheat Sheet: session-2/java-cheat-sheet.md
+      - Reference: session-2/reference.md
   - Session 3:
       - session-3/index.md
+      - Command-Based Robots: session-3/command-based.md
+      - Classes and Objects: session-3/classes-and-objects.md
+      - Conditionals: session-3/conditionals.md
+      - "Exercise: The RSL": session-3/exercise-rsl.md
+      - Reference: session-3/reference.md
   - Session 4:
       - session-4/index.md
+      - Controllers to Motors: session-4/controllers.md
+      - Methods and Lambdas: session-4/methods-and-lambdas.md
+      - "Exercise: Drive Input": session-4/exercise-drive-input.md
+      - "Exercise: Arcade Drive": session-4/exercise-arcade-drive.md
+      - Simulate It: session-4/simulate.md
+      - Reference: session-4/reference.md
   - Session 5:
       - session-5/index.md
-  - Session 6:
+      - Sensors and Feedback: session-5/sensors.md
+      - Units and Tests: session-5/units-and-tests.md
+      - "Exercise: Encoder Test": session-5/exercise-encoder-test.md
+      - "Exercise: Odometry": session-5/exercise-odometry.md
+      - Logs and AdvantageScope: session-5/logs.md
+      - Run It on the Romi: session-5/romi.md
+      - Reference: session-5/reference.md
+  - Session 6 (optional):
       - session-6/index.md
+      - Autonomous Commands: session-6/autonomous-commands.md
+      - Sequences and the Chooser: session-6/sequences-and-chooser.md
+      - Run It: session-6/run-it.md
+      - Reference: session-6/reference.md
 
 # Extra configuration
 extra:
