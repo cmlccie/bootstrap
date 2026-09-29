@@ -1,6 +1,6 @@
 # FRC Programming Bootcamp
 
-Welcome! This six-session bootcamp bootstraps new FRC programmers. By the end, you will have written, tested, simulated, and deployed Java robot code - and you will know how to collaborate on that code with your team using GitHub.
+Welcome! This five-session bootcamp (plus an optional sixth) bootstraps new FRC programmers. By the end, you will have written, tested, simulated, and deployed Java robot code - and you will know how to collaborate on that code with your team using GitHub.
 
 !!! info "Bootstrap"
 
@@ -11,14 +11,14 @@ Welcome! This six-session bootcamp bootstraps new FRC programmers. By the end, y
 - **Use the FRC software stack** - VS Code, WPILib, Driver Station, AdvantageScope, and the networks that connect your laptop to the robot.
 - **Read and write robot code** - understand the robot code lifecycle and the structure of a command-based robot.
 - **Test before you touch the robot** - run unit tests in a GitHub Codespace, then simulate on a laptop, then deploy to the Romi.
-- **Work like a team** - branch, commit, push, and open pull requests from your own GitHub account.
+- **Work like a team** - refresh, branch, code, test, commit, and push from your own GitHub account, the same way every session.
 
 ## 🧭 How the bootcamp works
 
 Each session is 60 to 90 minutes and hands-on. You leave every session having made something run, starting on day one.
 
 - **This site** holds the agenda, instructions, and reference material for each session.
-- **The [`2026-bootcamp` repository](https://github.com/gryphoncommand/2026-bootcamp)** holds the code. You will open it in a GitHub Codespace, work on your own branch, and open pull requests.
+- **The [`2026-bootcamp` repository](https://github.com/gryphoncommand/2026-bootcamp)** holds the code. You will open it in a GitHub Codespace, work on your own branch, and push it. Mentors merge finished work; pull requests come after the bootcamp.
 - **One Romi robot** is the shared target for your code - just like the competition robot will be during the season.
 
 ## 📅 Sessions
@@ -26,11 +26,11 @@ Each session is 60 to 90 minutes and hands-on. You leave every session having ma
 | Session | Topic |
 | ------- | ----- |
 | [Session 1](session-1/index.md) | The FRC Stack and Your First Commit - hardware, software, networks, GitHub, Codespaces, branch, commit, push |
-| [Session 2](session-2/index.md) | Your First Robot Code - robot code lifecycle, Java basics, unit tests, first pull request |
-| [Session 3](session-3/index.md) | Subsystems and Commands - command-based structure, buttons and triggers, Java classes and lambdas |
-| [Session 4](session-4/index.md) | Simulate It - drive code, WPILib simulation, AdvantageScope and dashboards |
-| [Session 5](session-5/index.md) | Networks, Driver Station, and the Romi - how the laptop talks to the robot, deploy to the Romi and drive it |
-| [Session 6](session-6/index.md) | Capstone - autonomous routine, pull request review, run it on the Romi, next steps |
+| [Session 2](session-2/index.md) | Anatomy of Robot Code - modes, init and periodic, reading Java, logging, the heartbeat exercise |
+| [Session 3](session-3/index.md) | Subsystems, Commands, and the Romi RSL - command-based structure, classes and objects, conditionals, unit tests |
+| [Session 4](session-4/index.md) | Controllers, Commands, and Simulation - controller to motor, methods and lambdas, arcade drive, the Sim GUI |
+| [Session 5](session-5/index.md) | Sensors, Telemetry, and the Romi - encoders, gyro, odometry, AdvantageScope, driving the real Romi |
+| [Session 6](session-6/index.md) | Autonomous (optional) - commands that finish, sequences, the dashboard chooser, running an auto on the Romi |
 
 ## 💡 How to get the most out of it
 
