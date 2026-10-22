@@ -39,11 +39,11 @@ WPILib does all of this in **meters** and **counterclockwise-positive** rotation
 
 A **setpoint** is where you want to be: 12 inches ahead, 90 degrees left, 1000 RPM. A sensor tells you where you are. The difference is the **error**. **Feedback control** means adjusting the output based on the error, over and over, until the error is zero.
 
-Session 6's `DriveDistance` is the simplest version: drive until the encoder says you have gone far enough, then stop. Real mechanisms use **PID**, which scales the push to the size of the error so the robot slows down as it arrives. A SPARK MAX can run that loop on board. Either way, the sensor is the half of the loop you cannot skip.
+Capstone 1's `DriveDistance` is the simplest version: drive until the encoder says you have gone far enough, then stop. Real mechanisms use **PID**, which scales the push to the size of the error so the robot slows down as it arrives. A SPARK MAX can run that loop on board. Either way, the sensor is the half of the loop you cannot skip.
 
 ## 📡 Telemetry
 
-Sensor values are numbers that change 50 times a second. You want to **see** them, not read them in a text log. Publishing to NetworkTables costs one line per value:
+Sensor values are numbers that change 50 times a second. You want to **see** them, not read them in a text log. Publishing to NetworkTables costs one line per value. *Read only*; the exercise adds it:
 
 ```java
 SmartDashboard.putNumber("Drive/headingDeg", getGyroAngleDegrees());

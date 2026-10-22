@@ -1,6 +1,6 @@
 # Classes and Objects
 
-Every `.java` file in this project defines one **class**. This page uses two files you will work with today to show what a class is made of.
+Every `.java` file in this project defines one **class**. This page uses two files you will work with today to show what a class is made of. Every code block here is *read only*: it is already in the repository. Find it in your editor.
 
 ## 🏗️ A class is a blueprint, an object is a thing built from it
 

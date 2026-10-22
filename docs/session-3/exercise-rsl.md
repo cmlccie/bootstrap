@@ -4,7 +4,13 @@ Make `RslLogic.shouldBeOn` follow the robot signal light rule until every test i
 
 Before you start, do steps 0-2 of [The Routine](../session-2/routine.md): refresh `main`, then branch `yourname/session-3`.
 
+!!! note "What is new on `main`"
+
+    Open `Robot.java`. The logging and heartbeat from Session 2 are already there, done the reference way, because a mentor merged them into `main`. You do not need your Session 2 branch today. Every session from now on starts like this.
+
 ## 1. Run the tests as they are
+
+**Run** the tests in the terminal:
 
 ```bash
 ./gradlew test
@@ -14,9 +20,9 @@ You will see: `BUILD SUCCESSFUL`. Nothing failed, because `RslLogicTest` is skip
 
 ## 2. Turn the tests on
 
-Open `src/test/java/frc/robot/RslLogicTest.java`. Delete the line that starts with `@Disabled`. Delete the matching `import org.junit.jupiter.api.Disabled;` line too. Save.
+Open `src/test/java/frc/robot/RslLogicTest.java`. **Delete** two lines: the one that starts with `@Disabled`, and the matching `import org.junit.jupiter.api.Disabled;` near the top. Save.
 
-Run the tests again:
+**Run** the tests again:
 
 ```bash
 ./gradlew test
@@ -35,7 +41,7 @@ Red is the correct color right now. The stub returns `false` for everything, so 
 
 ## 3. Handle the disabled case
 
-Open `src/main/java/frc/robot/RslLogic.java`. Replace the `TODO` line and the `return false;` under it with the first row of the truth table:
+Open `src/main/java/frc/robot/RslLogic.java`. The method body is two lines right now: a `TODO` comment and `return false;`. **Replace** the `TODO` comment line with an `if` block, and keep `return false;` for now. The whole method then reads:
 
 ```java title="src/main/java/frc/robot/RslLogic.java"
   public static boolean shouldBeOn(boolean enabled, double timeSeconds) {
@@ -46,13 +52,13 @@ Open `src/main/java/frc/robot/RslLogic.java`. Replace the `TODO` line and the `r
   }
 ```
 
-Run `./gradlew test`.
+**Run** `./gradlew test`.
 
 You will see: one failure left, `enabledRobotIsOnDuringFirstHalfSecond`. The disabled test passes.
 
 ## 4. Handle the blink
 
-Below the `if`, work out where we are in the one-second cycle, then return whether that is in the first half:
+Below the `if`, work out where we are in the one-second cycle, then return whether that is in the first half. **Replace** the `return false;` line with these three lines:
 
 ```java
     // How far are we into the current blink cycle?
@@ -61,9 +67,21 @@ Below the `if`, work out where we are in the one-second cycle, then return wheth
     return secondsIntoCycle < SignalLightConstants.kBlinkPeriodSeconds / 2;
 ```
 
-Replace the `return false;` with those lines. `SignalLightConstants` is already imported at the top of the file and `kBlinkPeriodSeconds` is `1.0`.
+`SignalLightConstants` is already imported at the top of the file and `kBlinkPeriodSeconds` is `1.0`. *Read only*, the finished method for checking against yours:
 
-Run `./gradlew test`.
+```java
+  public static boolean shouldBeOn(boolean enabled, double timeSeconds) {
+    if (!enabled) {
+      return true; // solid on while disabled
+    }
+    // How far are we into the current blink cycle?
+    double secondsIntoCycle = timeSeconds % SignalLightConstants.kBlinkPeriodSeconds;
+    // On for the first half of the cycle, off for the second half.
+    return secondsIntoCycle < SignalLightConstants.kBlinkPeriodSeconds / 2;
+  }
+```
+
+**Run** `./gradlew test`.
 
 You will see: `BUILD SUCCESSFUL`. Open the test report again: three tests, all green.
 
@@ -83,19 +101,26 @@ Steps 5-6 of [The Routine](../session-2/routine.md). Message: `Implement the rob
 
 ## 🎉 Stretch: a button on the Romi
 
-Make pressing button A on the Romi's board print a message. Open `RobotContainer.java` and add an import and one line in `configureButtonBindings()`:
+Make pressing button A on the Romi's board print a message. Open `src/main/java/frc/robot/RobotContainer.java`.
+
+**Add** this import below the other `import` lines:
 
 ```java
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 ```
 
+**Add** one line inside the empty `configureButtonBindings()` method, so it reads:
+
 ```java
   private void configureButtonBindings() {
+    // Pressing button A on the Romi's control board prints a message.
     new Trigger(m_signalLight::isButtonAPressed).onTrue(Commands.print("Romi button A pressed"));
   }
 ```
 
-A `Trigger` watches a boolean and runs a command when it turns `true`. `m_signalLight::isButtonAPressed` hands the trigger a method to call every loop. Nobody can press the button until Session 5, but `./gradlew build` proves it compiles, and it previews how Session 4 wires up a controller.
+A `Trigger` watches a boolean and runs a command when it turns `true`. `m_signalLight::isButtonAPressed` hands the trigger a method to call every loop. Nobody can press the button until Session 5, but **run** `./gradlew build` to prove it compiles. It previews how Session 4 wires up a controller.
+
+Want a real one? The [challenge](challenge.md) puts the red LED to work.
 
 ## ✅ Done when
 

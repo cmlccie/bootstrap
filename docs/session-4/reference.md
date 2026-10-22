@@ -23,6 +23,30 @@
 | `toggleOnTrue(cmd)` | Press to start, press again to stop |
 | `onFalse(cmd)` | Once, when released |
 
+## 🔁 Command lifecycle
+
+| Method | The scheduler calls it |
+| ------ | ---------------------- |
+| constructor | Once, at `new`. Store parameters, `addRequirements` |
+| `initialize()` | Once, each time the command starts |
+| `execute()` | Every 20 ms while it runs |
+| `isFinished()` | Every 20 ms, after `execute()`. Return `true` to stop |
+| `end(boolean interrupted)` | Once, when it stops. `interrupted` is `true` if something else stopped it |
+
+`ArcadeDriveCommand` skips `initialize()` because it has nothing to set up.
+
+## ⏱️ Timer
+
+```java
+import edu.wpi.first.wpilibj.Timer;
+
+private final Timer m_timer = new Timer();
+m_timer.restart();              // back to zero and running
+m_timer.get();                  // seconds since restart
+m_timer.hasElapsed(1.5);        // true once 1.5 s have passed
+Timer.getFPGATimestamp();       // the robot's clock, in seconds, no object needed
+```
+
 ## 🧰 Small commands without a class
 
 | Factory | Meaning |
@@ -31,12 +55,14 @@
 | `subsystem.run(() -> ...)` | Do this every loop until interrupted |
 | `subsystem.startEnd(() -> start, () -> end)` | Do the first at start, the second when it stops |
 | `Commands.print("text")` | Print a line, then finish |
+| `cmd.withTimeout(seconds)` | `cmd`, but stop it after that many seconds |
 
 ## 🖥️ Sim GUI
 
 | Panel | Use |
 | ----- | --- |
 | Robot State | Pick the mode. This is your Driver Station |
+| Timing | How long the program has been running |
 | System Joysticks | Drag a controller or Keyboard 0 to a slot in Joysticks |
 | PWM Outputs | Motor speeds by channel |
 | DIO | Digital pins: 3 is the yellow LED, 1 the green LED |

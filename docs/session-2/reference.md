@@ -26,6 +26,8 @@
 
 ## 🖨️ Logging
 
+*Read only.* The three logging calls and where their output goes.
+
 ```java
 import edu.wpi.first.wpilibj.DataLogManager;
 

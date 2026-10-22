@@ -1,8 +1,14 @@
 # FRC Programming Bootcamp - Claude Code Instructions
 
-This repository is the MkDocs static site for the **2026 FRC Programming Bootcamp**: a five-session course (plus an optional sixth) that bootstraps new and incoming FRC programming students. The site is published at <https://cmlccie.github.io/bootstrap/>.
+This repository is the MkDocs static site for the **2026 FRC Programming Bootcamp**: a five-session course plus two capstone projects that bootstraps new and incoming FRC programming students. The site is published at <https://cmlccie.github.io/bootstrap/>. Claude assists mentors in preparing, revising, and running the bootcamp; this file and the code repository's `.claude/CLAUDE.md` are the operating notes.
 
-A companion repository, **`gryphoncommand/2026-bootcamp`**, holds the robot code for the exercises. Students open it in GitHub Codespaces, work on their own branches, and push them. `main` is protected; a mentor merges. Pull requests, review, and merge conflicts are taught after the bootcamp, so no session mentions them.
+A companion repository, **`gryphoncommand/2026-bootcamp`**, holds the robot code for the exercises. Students open it in GitHub Codespaces, work on their own branches, and push them. `main` is protected. Pull requests, review, and merge conflicts are taught after the bootcamp, so no session teaches them (Session 1's challenge lets students discover a pull request on their own).
+
+## How `main` moves between sessions
+
+Students refresh `main` at the start of every session and branch from it, so they never carry their own code forward. Instead **a mentor merges the previous session's `solution/session-N` branch into `main` between sessions**. Session N starts from a robot with Sessions 2 through N-1 done the reference way. The tag `bootcamp-start` in the code repository marks the commit `main` is reset to for each new run. Challenge solutions live on `solution/session-N-challenge` branches and are never merged. The full table is in the code repository's `.claude/CLAUDE.md`.
+
+Every session page that says "that is your Session N code" relies on this. Session index pages carry a mentor checklist line naming the branch to merge. Keep those lines, the code repository's table, and the README in agreement.
 
 Last year's (2025) site content is preserved at the git tag `2025`. Use it as source material, never as a structure to copy. Read it with `git show 2025:docs/<path>` or `git ls-tree -r --name-only 2025 docs/`.
 
@@ -34,11 +40,12 @@ Last year's (2025) site content is preserved at the git tag `2025`. Use it as so
 
 ## Key constraints to remember
 
-- **Five sessions of 60 to 90 minutes, plus an optional sixth.** Plan for 75 minutes with a 60-minute core and optional stretch material. Cut scope before cramming.
+- **Five sessions of 60 to 90 minutes, plus two capstones.** Plan for 75 minutes with a 60-minute core and optional stretch material. Cut scope before cramming.
+- **Every session ends with an optional challenge** on its own `challenge.md` page: a goal in the same vein as the exercise, a done-when list, pointers to what they already know, and collapsible hints. Hints are reminders, pointers, and links, never code and never the solution. The site never links to the challenge solution branches.
 - **No team name or number in this repository.** Students from other teams may use this site. Where a team number matters (IP addresses, mDNS names, WPILib project settings) use `TE.AM` placeholders and explain how a real number fills them in. Team-specific details live in the `gryphoncommand` organization's repositories.
 - **Students use personal GitHub accounts and their personal free Codespaces quota.** Teach them to use the smallest machine and stop Codespaces when done.
 - **Session 1 has no Java.** Creating a Codespace, a branch, and a pushed commit counts as "running code" on day one. Real robot code starts in session 2.
-- **Session 6 has no new Java.** It teaches autonomous routines and selecting one for a match.
+- **Capstone 1 has no new Java** except the `for` loop, which lives on the Java reference page for the shapes challenge. Capstone 2 (the arm) has no walkthrough at all: facts, API, a plan, and hints.
 - **`./gradlew simulateJava` runs headless in Codespaces** (`CODESPACES=true` or `-Pheadless` in `build.gradle`): no Sim GUI, no Romi websocket, robot stays Disabled, logs print to the terminal. That is Session 2's "see it run" moment.
 - **Exercise tests ship on `main` marked `@Disabled("Session N: ...")`.** Step one of the exercise is deleting that line. Completed exercises are on CI-verified `solution/session-N` branches in the code repo; site code blocks are copied from them, never typed fresh.
 - **Codespaces cannot reach the Romi.** Romi code runs on a laptop in WPILib simulation mode and talks to the Romi over its Wi-Fi network (default `10.0.0.2`). Unit tests and builds happen in Codespaces; simulation and Romi runs happen on programming laptops.
@@ -55,15 +62,28 @@ Last year's (2025) site content is preserved at the git tag `2025`. Use it as so
 | 3 | Subsystems, Commands, and the Romi RSL | Command-based; `OnBoardIO`; the RSL rule | Classes, objects, attributes, constructors, `static`; booleans, comparisons, `if/else`, `!`, `&&`, `||`; reading a JUnit test | `RslLogic.shouldBeOn` passes provided tests | Codespace |
 | 4 | Controllers, Commands, and Simulation | Xbox axes/buttons; controller to motor path; PWM Spark vs SPARK MAX, PID concepts; Sim GUI; SmartDashboard/NetworkTables | Parameters and returns, `Math.abs`, constants, writing a class, `extends`, lambdas and method references | `DriveInput` tests, `ArcadeDriveCommand`, button bindings, simulate | Codespace + laptop |
 | 5 | Sensors, Telemetry, and the Romi | Encoders, gyro, odometry, setpoints; AdvantageScope; Romi Wi-Fi and running on it | Unit math, `double` tolerance, objects of objects, `@BeforeEach`/`@AfterEach`, `AutoCloseable` | Extend `RomiDrivetrainTest`; gyro + odometry + `Field2d`; drive the Romi; check gyro sign | Codespace + laptop + Romi |
-| 6 (opt) | Autonomous | Commands that finish; `Commands.sequence`; `SendableChooser`; the auto handoff in `Robot` | none new | `DriveDistance`, `TurnDegrees`, chooser; step through in sim; run on Romi | Laptop + Romi |
 
-Each session: 5 min recap, 10 min routine, 10 min FRC concept, 10 min Java concept, 30 min exercise, 5 min wrap. A cumulative Java cheat sheet lives at `docs/session-2/java-cheat-sheet.md` and gains one section per session.
+| Capstone | Title | Walkthrough | Challenge |
+| -------- | ----- | ----------- | --------- |
+| 1 | Autonomous | `DriveDistance`, `TurnDegrees`, `Commands.sequence`, `SendableChooser`, the auto handoff in `Robot`; step through in sim; run on Romi | Square, triangle, hexagon, S-curve routines |
+| 2 | The Arm (conditional on the Pololu arm kit being installed) | None. Hardware facts, `Servo` API, a milestone plan, hints | Subsystem, test, controls, calibration, an auto that uses the arm |
+
+| Session | Challenge | Reference solution branch |
+| ------- | --------- | ------------------------- |
+| 1 | Sign the Wall: add `<season>/<username>.md` to `gryphoncommand/wall` and open a pull request | none |
+| 2 | The Uptime Clock: heartbeat as `Uptime m:ss`, exactly-once line at one minute | `solution/session-2-challenge` |
+| 3 | SOS: red LED flashes SOS in Morse while Disabled (pin reconfiguration, pure logic, a test) | `solution/session-3-challenge` |
+| 4 | Turn Around: a button spins 180 degrees and stops on its own; speed and time in `Constants` | `solution/session-4-challenge` |
+| 5 | See It Drive: pose as a `Pose2d` struct on AdvantageScope's 2D and 3D field, a reset button, a test | `solution/session-5-challenge` |
+
+Each session: 5 min recap, 10 min routine, 10 min FRC concept, 10 min Java concept, 30 min exercise, 5 min wrap, challenge for home. A cumulative Java cheat sheet lives at `docs/session-2/java-cheat-sheet.md` and gains one section per session.
 
 Design rules for exercises:
 
 - Every Java exercise is code that deploys to the Romi, even when the session only runs it in unit tests.
 - Teach Java syntax through robot behavior, never through generic examples. Example: booleans and `if` through the RSL-style LED, `double` and math through drive speeds, classes through subsystems.
-- Sessions 2-3 run code in unit tests (and headless sim) in Codespaces. Session 4 adds the Sim GUI on laptops. Sessions 5-6 run on the Romi.
+- Sessions 2-3 run code in unit tests (and headless sim) in Codespaces. Session 4 adds the Sim GUI on laptops. Session 5 and the capstones run on the Romi.
+- A challenge uses only syntax taught by its session (or the capstone's reference page). Its reference solution must be solvable by a student who did the exercise.
 - Students write and commit in Codespaces and only run on the shared laptops, so git identity stays theirs. Pages say so.
 - The Romi onboard I/O (`OnBoardIO`: green, yellow, and red LEDs; buttons A, B, C) is the safe playground for early exercises because it needs no motors.
 
@@ -71,14 +91,20 @@ Design rules for exercises:
 
 ```text
 docs/
-├── index.md              # Home: goals, how the bootcamp works, session table
-├── session-1/index.md    # One directory per session
-├── session-2/            # index, routine, concept pages, exercise pages, java-cheat-sheet, reference
+├── index.md                  # Home: goals, how the bootcamp works, session table, code-block convention
+├── session-1/index.md        # One directory per session
+├── session-2/                # index, routine, concept pages, exercise pages, challenge, java-cheat-sheet, reference
 ├── ...
-└── session-6/index.md
+├── session-5/
+├── capstones/
+│   ├── index.md              # Capstones landing page
+│   ├── autonomous/           # Capstone 1: index, autonomous-commands, sequences-and-chooser, run-it, challenge, reference
+│   └── arm/                  # Capstone 2: index, arm-hardware, reference
+└── reference/                # index, java-syntax, dev-environment, robot
 ```
 
-- Each session is a top-level nav section in `mkdocs.yml`. The session's `index.md` is its landing page (objectives, before-you-arrive, agenda table, exercises, reference, next session). Pages per session, in nav order: FRC concept page(s), Java page, exercise page(s), `reference.md`. Add every page to the nav.
+- Each session is a top-level nav section in `mkdocs.yml`. The session's `index.md` is its landing page (objectives, before-you-arrive with a mentor merge line, agenda table, exercises, challenge, reference, next session). Pages per session, in nav order: FRC concept page(s), Java page, exercise page(s), `challenge.md`, `reference.md`. Add every page to the nav.
+- **Capstones** and **Reference** are top-level nav tabs. The Reference tab aggregates: `java-syntax.md` (every construct in the code repository and solutions, with where it appears), `dev-environment.md` (the tools students use, then the rest of the FRC software), `robot.md` (Romi pins and numbers, controller map, keyboard map, Sim GUI panels, NetworkTables keys, addresses). Session reference pages stay; the top-level pages collect, they do not replace.
 - Shared pages live in `session-2/` and are linked with relative paths from later sessions: `routine.md` and `java-cheat-sheet.md`.
 - Mermaid diagrams render natively (` ```mermaid ` fences). Prefer a small diagram over a paragraph for anything about how components connect.
 - Put images and media in the session directory next to the page that uses them.
@@ -108,6 +134,8 @@ Cheat-sheet material and links needed for this session only.
 - Friendly, direct, encouraging. Write at an 8th-grade reading level.
 - Active voice. Short sentences. One idea per sentence.
 - **Tell-show-tell** for instructions: say what they will see, show it, then review what they saw.
+- **Every code block says what to do with it.** Exercise blocks start with a bold verb and a location: **Add** below X, **Replace** the lines named so the method reads, **Create** the file with this whole block, **Run** in the terminal, **Delete** the line. Concept-page blocks that are not meant to be typed say *read only* or "already in the file". A "finished method for checking against yours" block is marked *read only*. The convention is explained once on the home page.
+- **Active voice for every action.** "Open the file", "Run the tests", "Drag the controller". Never "the file should be opened".
 - Code samples are as simple as possible and only as sophisticated as necessary. Minimal error handling unless teaching error handling.
 - Use comments to explain concepts, never to narrate obvious code.
 - Every code example is real FRC code they could put in the `2026-bootcamp` repository. Test it before publishing it.
@@ -161,3 +189,6 @@ Never include AI model identifiers in commit messages, PR text, or site content.
 - [ ] Every exercise step tells the student what result to expect.
 - [ ] Code examples were actually run (in the `2026-bootcamp` repository when they are robot code).
 - [ ] Content matches the draft outline above, or the outline was updated on purpose.
+- [ ] Every exercise code block has an action verb and a location; concept blocks are marked read only.
+- [ ] Challenge pages give no code in hints. The reference solution branch builds (CI green).
+- [ ] Cross-session claims ("that is your Session 3 code") hold under the moving-`main` model.

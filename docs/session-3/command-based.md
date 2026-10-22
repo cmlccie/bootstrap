@@ -42,7 +42,7 @@ The Romi's control board has three LEDs and three buttons, and no motors are inv
 | DIO 2 | Button C **or** red LED | Button C |
 | DIO 3 | Yellow LED | Yellow LED, our robot signal light |
 
-The choice for the shared pins is made once, when the `OnBoardIO` object is created:
+The choice for the shared pins is made once, when the `OnBoardIO` object is created. *Read only*, from `SignalLight.java`:
 
 ```java title="src/main/java/frc/robot/subsystems/SignalLight.java"
 private final OnBoardIO m_onboardIO = new OnBoardIO(ChannelMode.OUTPUT, ChannelMode.INPUT);
@@ -59,7 +59,7 @@ Every FRC robot has an orange Robot Signal Light so people nearby can tell, at a
 | Disabled | Solid on |
 | Enabled | Blinking |
 
-The Romi has no RSL, so the yellow LED will play the part. `SignalLight` already runs every loop and asks one question:
+The Romi has no RSL, so the yellow LED will play the part. `SignalLight` already runs every loop and asks one question. *Read only*, from its `periodic()` method:
 
 ```java
 m_yellowOn = RslLogic.shouldBeOn(enabled, now);

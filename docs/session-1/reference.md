@@ -36,13 +36,13 @@
 | ---- | ------- |
 | **Repository (repo)** | A project and its full history |
 | **Clone** | A copy of a repository on another computer. Your Codespace has one |
-| **main** | The team's official branch. Protected. Changes reach it through pull requests |
+| **main** | The team's official branch. Protected. Changes reach it through pull requests that a mentor merges |
 | **Branch** | Your own line of work, named `yourname/what-it-does` |
 | **Stage** | Choose which changes go in the next commit |
 | **Commit** | A saved snapshot with a message |
 | **Push** | Send your commits to GitHub |
 | **Pull** | Get commits from GitHub |
-| **Pull request (PR)** | Ask the team to review and merge your branch into `main`. Session 2 |
+| **Pull request (PR)** | Ask the team to review and merge your branch into `main`. Taught after the bootcamp, unless you take on today's challenge |
 
 ## ⌨️ Commands used today
 

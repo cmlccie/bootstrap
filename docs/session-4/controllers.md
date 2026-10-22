@@ -24,7 +24,7 @@ WPILib sees a controller as numbered axes and buttons.
 
     Pushing a stick forward gives **-1.0**. That surprises everyone. It comes from old flight-stick conventions, and every FRC team writes code to flip it. So will you.
 
-`CommandXboxController` names these for you, so you never type the numbers:
+`CommandXboxController` names these for you, so you never type the numbers. *Read only*:
 
 ```java
 m_controller.getLeftY()      // axis 1
@@ -74,7 +74,7 @@ Two words you will hear all season:
 
 ## 📊 NetworkTables and the dashboard
 
-The robot program keeps a shared table of named values called **NetworkTables**. Anything on the network can read it: the Sim GUI, a dashboard, AdvantageScope. Writing a value is one line:
+The robot program keeps a shared table of named values called **NetworkTables**. Anything on the network can read it: the Sim GUI, a dashboard, AdvantageScope. Writing a value is one line. *Read only*; the exercise puts it in the command:
 
 ```java
 SmartDashboard.putNumber("Drive/forward", forward);

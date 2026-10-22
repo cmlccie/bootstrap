@@ -1,6 +1,6 @@
 # Reading Java: The Pieces of Robot.java
 
-You have already seen most of Java's building blocks in `Robot.java`. This page names them so you can write your own. Everything here shows up in today's exercise.
+You have already seen most of Java's building blocks in `Robot.java`. This page names them so you can write your own. Everything here shows up in today's exercise. The code blocks on this page are examples to *read*, not to type; the exercise page tells you what to type.
 
 ## 🧱 Structure
 

@@ -28,7 +28,7 @@ The Driver Station (or the field at competition) picks the mode. Your code never
 
 ## 🧩 One file, top to bottom
 
-`Robot.java` is short. Here is what each part is for.
+`Robot.java` is short. Here is what each part is for. Every block on this page is *read only*: it is already in the file. Find each one in your editor as you go.
 
 ### The header
 
@@ -108,7 +108,7 @@ Every mode has a pair:
 | `teleopInit()` / `teleopPeriodic()` | Entering Teleop / every loop while Teleop |
 | `testInit()` / `testPeriodic()` | Entering Test / every loop while Test |
 
-Look at `autonomousInit()` in your file. It asks the `RobotContainer` for the autonomous command and hands it to the scheduler. That is the whole handoff. Session 6 builds the command it hands over.
+Look at `autonomousInit()` in your file. It asks the `RobotContainer` for the autonomous command and hands it to the scheduler. That is the whole handoff. Capstone 1 builds the command it hands over.
 
 !!! note "Init or periodic?"
 

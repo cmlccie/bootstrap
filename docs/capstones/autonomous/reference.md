@@ -1,4 +1,4 @@
-# Session 6 Reference
+# Capstone 1 Reference
 
 ## 🔁 Command lifecycle
 
@@ -21,6 +21,7 @@
 | `Commands.print("text")` | Logs a line, finishes at once |
 | `Commands.none()` | Nothing, finishes at once |
 | `a.withTimeout(3.0)` | `a`, but give up after three seconds |
+| `a.andThen(b, c)` | `a`, then `b`, then `c`. The same as a sequence, built one piece at a time |
 
 ## 🎛️ Chooser
 

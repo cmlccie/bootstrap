@@ -14,7 +14,8 @@ By the end of this session you will be able to:
 
 ## ✅ Before you arrive
 
-- [ ] Session 4's branch is pushed.
+- [ ] Session 4's branch is pushed. Today starts from a fresh `main`, which already has Sessions 2 through 4 in it.
+- [ ] Mentors: `solution/session-4` is merged into `main`.
 - [ ] Mentors: the Romi is charged, its Wi-Fi network is up, and one laptop is confirmed to reach `10.0.0.2`.
 
 ## 🗓️ Agenda
@@ -29,7 +30,7 @@ By the end of this session you will be able to:
 | 0:40 | Exercise part 2: odometry and a field on the dashboard | [Exercise: Odometry](exercise-odometry.md) |
 | 0:55 | AdvantageScope: live values and log files | [Logs and AdvantageScope](logs.md) |
 | 1:05 | The Romi: connect, run, drive, check the gyro sign | [Run It on the Romi](romi.md) |
-| 1:25 | Wrap up: what Session 6 adds | |
+| 1:25 | Wrap up: what the capstones add. The challenge is for home | [Challenge: See It Drive](challenge.md) |
 
 !!! tip "Mentor pacing note"
 
@@ -43,11 +44,15 @@ By the end of this session you will be able to:
 4. [Logs and AdvantageScope](logs.md) - plot live values and open a log file.
 5. [Run It on the Romi](romi.md) - the real thing.
 
+## 🏆 Challenge (optional)
+
+[See It Drive](challenge.md) - make the robot on AdvantageScope's 2D and 3D field follow the real Romi, with a reset button and a test.
+
 ## 📚 Reference
 
 - [Session 5 Reference](reference.md) - sensor API, addresses, AdvantageScope quick start.
 - [Java Cheat Sheet](../session-2/java-cheat-sheet.md) - now with units, decimals, and test setup.
 
-## ⏭️ Next session
+## ⏭️ What comes next
 
-Session 6 is optional and has no new Java. You write commands that finish on their own, chain them into an autonomous routine, put the routines in a chooser on the dashboard, and run the one you pick on the Romi.
+That is the last session. Next come the [capstones](../capstones/index.md): autonomous routines you design, and a robot arm. Nothing new to learn before the first one. Everything from Sessions 2 through 5 is the toolkit.

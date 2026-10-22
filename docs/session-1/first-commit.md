@@ -21,7 +21,7 @@ gitGraph
 
 1. Look at the bottom-left of the status bar. It says `main`. Click it.
 2. Choose **Create new branch...**
-3. Type your branch name and press ++enter++. Use this pattern, with your own GitHub username:
+3. Type your branch name and press ++enter++. Use this pattern, with your own GitHub username in place of `yourname`:
 
     ```text
     yourname/session-1
@@ -39,7 +39,7 @@ The `team/` folder holds one file per programmer.
 
 1. In the Explorer, right-click the `team` folder and choose **New File...**
 2. Name it with your GitHub username: `yourname.md`
-3. Type this into the file, filling in your own details:
+3. **Add** this to the empty file, then fill in your own details:
 
     ```markdown title="team/yourname.md"
     # Your Name
@@ -58,7 +58,7 @@ You will see: the file name turns green in the Explorer and a badge with the num
 
 1. Open **Source Control** from the left bar.
 2. Your file is listed under **Changes**. Hover over it and click the **+** to stage it. It moves to **Staged Changes**.
-3. In the message box at the top, type a message that says what the change does:
+3. In the message box at the top, **type** a message that says what the change does:
 
     ```text
     Add yourname to the team roster
@@ -89,7 +89,7 @@ You will see: your commit, your file, your name. That is your first contribution
 
 ## 🎉 Bonus: see it from the terminal
 
-Everything you just clicked is also a command. In the terminal, run:
+Everything you just clicked is also a command. **Run** this in the terminal:
 
 ```bash
 git log --oneline -3

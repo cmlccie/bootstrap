@@ -28,7 +28,7 @@ Doing these two things ahead of time saves 15 minutes of the session for everyon
 | 0:25 | GitHub account check and join the team organization | [GitHub Setup](github-setup.md) |
 | 0:35 | Create your first Codespace and tour VS Code | [Your First Codespace](first-codespace.md) |
 | 0:50 | Create a branch, add yourself to the team roster, commit, push | [Your First Commit](first-commit.md) |
-| 1:10 | Wrap up: stop your Codespace, preview of Session 2 | |
+| 1:10 | Wrap up: stop your Codespace, preview of Session 2. The challenge is for home | [Challenge: Sign the Wall](challenge.md) |
 
 !!! tip "Mentor pacing note"
 
@@ -43,9 +43,13 @@ Work through the pages in order. Each one ends with something you can see on scr
 3. [Your First Codespace](first-codespace.md) - open the repository in the browser and run a command in the terminal.
 4. [Your First Commit](first-commit.md) - put your name in the team roster and push it to GitHub.
 
+## 🏆 Challenge (optional)
+
+[Sign the Wall](challenge.md) - use today's skills on a second repository, and figure out the one step we have not shown you: asking for your branch to be merged.
+
 ## 📚 Reference
 
-The [Session 1 Reference](reference.md) has a glossary of every stack term used today and the git vocabulary you will hear all season.
+The [Session 1 Reference](reference.md) has a glossary of every stack term used today and the git vocabulary you will hear all season. The site-wide [Reference](../reference/index.md) tab has the full development environment guide.
 
 ## ⏭️ Next session
 

@@ -1,6 +1,6 @@
 # Methods and Lambdas
 
-Session 3 covered methods that return a value. Today's methods also take values in, and today you hand a method to another object to call later. That second idea has a name: a lambda.
+Session 3 covered methods that return a value. Today's methods also take values in, and today you hand a method to another object to call later. That second idea has a name: a lambda. The blocks on this page are examples to *read*; the exercise pages say what to type.
 
 ## 📥 Parameters and return values
 

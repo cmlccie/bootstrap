@@ -1,6 +1,6 @@
 # Units and Tests
 
-Three small Java topics that show up the moment sensors do: converting units, comparing decimals, and testing code that talks to hardware.
+Three small Java topics that show up the moment sensors do: converting units, comparing decimals, and testing code that talks to hardware. The blocks on this page are *read only*; the exercise pages say what to type.
 
 ## 📐 Equations in code
 

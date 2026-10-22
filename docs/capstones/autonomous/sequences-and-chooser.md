@@ -4,7 +4,7 @@ A routine is commands run one after another. A chooser lets the driver pick whic
 
 ## 🔗 Sequences
 
-`Commands.sequence(a, b, c)` builds one command that runs `a` until it finishes, then `b`, then `c`. It requires whatever its pieces require, so it plays by the same rules as any command.
+`Commands.sequence(a, b, c)` builds one command that runs `a` until it finishes, then `b`, then `c`. It requires whatever its pieces require, so it plays by the same rules as any command. *Read only* for now; it goes in the chooser below:
 
 ```java
 Commands.sequence(
@@ -23,7 +23,7 @@ At a competition, which routine to run depends on where the robot starts. Nobody
 
 ## 1. Imports
 
-In `RobotContainer.java`, add:
+Open `src/main/java/frc/robot/RobotContainer.java`. **Add** these four imports below the other `import` lines:
 
 ```java
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
@@ -34,7 +34,7 @@ import frc.robot.commands.TurnDegrees;
 
 ## 2. The chooser attribute
 
-Below the controller:
+**Add** this attribute directly below the `m_controller` attribute:
 
 ```java
   // The list of autonomous routines the driver picks from on the dashboard.
@@ -45,7 +45,7 @@ Below the controller:
 
 ## 3. Fill it
 
-Call a new method from the constructor:
+**Add** one line to the constructor, below `configureButtonBindings();`, so it reads:
 
 ```java
   public RobotContainer() {
@@ -54,7 +54,7 @@ Call a new method from the constructor:
   }
 ```
 
-And write it:
+**Add** the new method directly below `configureButtonBindings()`'s closing `}`:
 
 ```java
   /** Every autonomous routine goes in the chooser. The first one is the default. */
@@ -75,10 +75,14 @@ The default is "Do nothing" on purpose. A robot that does nothing is safe. A rob
 
 ## 4. Hand over the selection
 
-Replace `getAutonomousCommand()`:
+**Replace** the whole `getAutonomousCommand()` method, comment included, so it reads:
 
 ```java
-  /** The routine the driver selected on the dashboard. Robot.autonomousInit() schedules it. */
+  /**
+   * The routine the driver selected on the dashboard. {@link Robot#autonomousInit()} schedules it.
+   *
+   * @return the command to run in autonomous
+   */
   public Command getAutonomousCommand() {
     return m_autoChooser.getSelected();
   }
@@ -94,6 +98,8 @@ Open `Robot.java` and read it one more time. Session 2's tour ends here.
 
 ## 5. Build and push
 
+**Run** the build:
+
 ```bash
 ./gradlew build
 ```
@@ -102,7 +108,7 @@ You will see: `BUILD SUCCESSFUL`. Commit: `Add autonomous routines and a dashboa
 
 ## 🎉 Your own routine
 
-Add a fourth option. A square is four `DriveDistance` and four `TurnDegrees`. A there-and-back is drive, turn 180, drive. Name it after your pair. This is the routine you run on the Romi.
+Add a fourth option before you go to the Romi: a there-and-back is drive, turn 180, drive. Name it after your pair. The [challenge](challenge.md) asks for more.
 
 ## ✅ Done when
 

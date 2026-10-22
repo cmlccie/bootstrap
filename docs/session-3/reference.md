@@ -17,8 +17,10 @@
 | --- | ------- | ---- |
 | DIO 0 | Button A | `m_onboardIO.getButtonAPressed()` |
 | DIO 1 | Green LED | `m_onboardIO.setGreenLed(true)` |
-| DIO 2 | Button C | `m_onboardIO.getButtonCPressed()` |
+| DIO 2 | Button C (or the red LED) | `m_onboardIO.getButtonCPressed()` (or `setRedLed(true)`) |
 | DIO 3 | Yellow LED | `m_onboardIO.setYellowLed(true)` |
+
+Which way a shared pin goes is set once, by the two `ChannelMode` values passed to `new OnBoardIO(...)`: the first is DIO 1, the second is DIO 2. `OUTPUT` means LED, `INPUT` means button.
 
 ## 🧪 JUnit cheat sheet
 

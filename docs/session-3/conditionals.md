@@ -1,6 +1,6 @@
 # Conditionals
 
-A `boolean` is a value that is either `true` or `false`. Conditionals are how code makes decisions based on booleans. Today's exercise is one decision: should the light be on?
+A `boolean` is a value that is either `true` or `false`. Conditionals are how code makes decisions based on booleans. Today's exercise is one decision: should the light be on? The blocks on this page are examples to *read*. The exercise page says what to type.
 
 ## ⚖️ Comparisons make booleans
 
