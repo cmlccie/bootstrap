@@ -30,7 +30,7 @@ Open the Explorer and click into `src/main/java/frc/robot`. That folder is where
 
 ## 3. Run a command
 
-Open the terminal and type:
+Open the terminal, then **run** this command:
 
 ```bash
 ./gradlew --version

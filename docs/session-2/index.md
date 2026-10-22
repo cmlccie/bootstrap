@@ -15,6 +15,7 @@ By the end of this session you will be able to:
 ## ✅ Before you arrive
 
 - [ ] Your Codespace from Session 1 still exists at [github.com/codespaces](https://github.com/codespaces). If it was deleted, create a new one from the repository's **Code** button.
+- [ ] Mentors: `main` is at the tag `bootcamp-start`. Nothing to merge before this session.
 - [ ] Skim [The Routine](routine.md). You will do it every session from now on.
 
 ## 🗓️ Agenda
@@ -28,7 +29,7 @@ By the end of this session you will be able to:
 | 0:35 | Logging: two ways, and where it goes | [Logging](logging.md) |
 | 0:40 | Exercise: the heartbeat | [Exercise: The Heartbeat](exercise-heartbeat.md) |
 | 1:05 | Commit, push, stop your Codespace | [The Routine](routine.md) |
-| 1:10 | Wrap up: what Session 3 adds | |
+| 1:10 | Wrap up: what Session 3 adds. The challenge is for home | [Challenge: The Uptime Clock](challenge.md) |
 
 !!! tip "Mentor pacing note"
 
@@ -38,6 +39,10 @@ By the end of this session you will be able to:
 
 1. [The Routine](routine.md) - refresh `main` and create `yourname/session-2`.
 2. [Exercise: The Heartbeat](exercise-heartbeat.md) - log mode changes, count loops, run the program, push.
+
+## 🏆 Challenge (optional)
+
+[The Uptime Clock](challenge.md) - turn the heartbeat into a minutes-and-seconds clock. Same tools, no steps.
 
 ## 📚 Reference
 

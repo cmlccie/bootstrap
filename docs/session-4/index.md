@@ -14,7 +14,8 @@ By the end of this session you will be able to:
 
 ## ✅ Before you arrive
 
-- [ ] Session 3's branch is pushed.
+- [ ] Session 3's branch is pushed. Today starts from a fresh `main`, which already has Sessions 2 and 3 in it.
+- [ ] Mentors: `solution/session-3` is merged into `main`.
 - [ ] A programming laptop with WPILib 2026 installed, the repository cloned, and an Xbox controller. Mentors set these up. You will share them.
 
 ## 🗓️ Agenda
@@ -28,7 +29,7 @@ By the end of this session you will be able to:
 | 0:30 | Exercise part 1: `DriveInput` passes its tests | [Exercise: Drive Input](exercise-drive-input.md) |
 | 0:40 | Exercise part 2: `ArcadeDriveCommand` and button bindings | [Exercise: Arcade Drive](exercise-arcade-drive.md) |
 | 0:55 | Push, then simulate on a laptop | [Simulate It](simulate.md) |
-| 1:15 | Wrap up: what Session 5 adds | |
+| 1:15 | Wrap up: what Session 5 adds. The challenge is for home | [Challenge: Turn Around](challenge.md) |
 
 !!! tip "Mentor pacing note"
 
@@ -40,6 +41,10 @@ By the end of this session you will be able to:
 2. [Exercise: Drive Input](exercise-drive-input.md) - deadband and sign math, tested.
 3. [Exercise: Arcade Drive](exercise-arcade-drive.md) - the command, the default command, two button bindings, dashboard values.
 4. [Simulate It](simulate.md) - run it on a laptop with a controller.
+
+## 🏆 Challenge (optional)
+
+[Turn Around](challenge.md) - one button press spins the Romi 180 degrees and stops on its own. A command that finishes, with its numbers in `Constants`.
 
 ## 📚 Reference
 

@@ -4,7 +4,7 @@ Time to see the robot respond. The WPILib simulator runs your real robot program
 
 ## 1. Get your branch onto the laptop
 
-The laptop has the repository cloned. Open it in VS Code (the WPILib one, with the WPILib icon). In the terminal:
+The laptop has the repository cloned. Open it in VS Code (the WPILib one, with the WPILib icon). **Run** these two commands in the terminal, with your own branch name:
 
 ```bash
 git fetch origin
@@ -23,7 +23,7 @@ Plug the Xbox controller into the laptop's USB port before starting the simulato
 
 ## 3. Start the simulator
 
-Press ++f5++, or run in the terminal:
+Press ++f5++, or **run** this in the terminal:
 
 ```bash
 ./gradlew simulateJava
@@ -59,7 +59,9 @@ You will see: the axis and button readouts in the Joysticks panel move when you 
 
 You will see: **PWM Outputs** channels 0 and 1 both go positive. Push the right stick right: they split, one up and one down. Let go: both return to 0.
 
-Watch **DIO 3** while enabled: it flips between high and low twice a second. That is your Session 3 code blinking the RSL. Click **Disabled**: it goes solid.
+Watch **DIO 3** while enabled: it flips between high and low twice a second. That is the Session 3 RSL rule blinking, which came to `main` when the mentor merged it. Click **Disabled**: it goes solid.
+
+Did the Session 3 challenge? It is on your `yourname/session-3` branch, not on `main`. Check that branch out on the laptop instead and watch **DIO 2** while Disabled.
 
 ## 7. Try the buttons
 
@@ -73,6 +75,8 @@ Open the **NetworkTables** panel (from the top menu if it is not visible) and ex
 ## 9. Stop
 
 Click **Disabled**, then close the window or press ++ctrl+c++ in the terminal.
+
+Up for one more? The [challenge](challenge.md) adds a button that turns the Romi around by itself.
 
 ## ✅ Done when
 

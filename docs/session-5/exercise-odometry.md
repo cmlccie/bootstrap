@@ -4,7 +4,7 @@ Give the drivetrain a gyro, let odometry track the robot's pose, draw it on a fi
 
 ## 1. A constant for the gyro's direction
 
-WPILib counts counterclockwise turns as positive. The Romi's gyro may count the other way. Rather than guess, make it a switch. In `Constants.java`, add to `DriveConstants`:
+WPILib counts counterclockwise turns as positive. The Romi's gyro may count the other way. Rather than guess, make it a switch. Open `src/main/java/frc/robot/Constants.java`. **Add** this inside `DriveConstants`, directly below `kSlowModeFactor`:
 
 ```java title="src/main/java/frc/robot/Constants.java"
     /**
@@ -18,7 +18,7 @@ You will find out which value is right on the Romi, later today.
 
 ## 2. New imports
 
-At the top of `src/main/java/frc/robot/subsystems/RomiDrivetrain.java`, add:
+Open `src/main/java/frc/robot/subsystems/RomiDrivetrain.java`. **Add** these imports below the existing `import` lines:
 
 ```java
 import edu.wpi.first.math.geometry.Pose2d;
@@ -32,7 +32,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 ## 3. Three new attributes
 
-Below `m_diffDrive`:
+**Add** these three attributes directly below the `m_diffDrive` attribute (after its closing `;`):
 
 ```java
   // The gyro on the Romi's control board measures how far the robot has turned.
@@ -50,7 +50,7 @@ Order matters: `m_odometry` calls `getRotation()`, which uses `m_gyro`, so the g
 
 ## 4. Publish the field once
 
-At the end of the constructor:
+**Add** this line at the end of the constructor, below `m_rightMotor.setInverted(true);`:
 
 ```java
     SmartDashboard.putData("Field", m_field);
@@ -58,7 +58,7 @@ At the end of the constructor:
 
 ## 5. Heading methods
 
-Below `getAverageDistanceInch()`:
+**Add** these four methods directly below `getAverageDistanceInch()`:
 
 ```java
   /** Heading in degrees, straight from the gyro. Increases as the robot turns. */
@@ -87,7 +87,7 @@ Below `getAverageDistanceInch()`:
 
 ## 6. Update every loop
 
-Replace the empty `periodic()`:
+`periodic()` is empty except for a comment. **Replace** the whole method so it reads:
 
 ```java
   @Override
@@ -108,7 +108,7 @@ Replace the empty `periodic()`:
 
 ## 7. Clean up in `close()`
 
-Add two lines at the end of `close()` so tests can free the gyro and the field too:
+**Add** two lines at the end of `close()`, after `m_rightEncoder.close();`, so tests can free the gyro and the field too:
 
 ```java
     m_gyro.close();
@@ -116,6 +116,8 @@ Add two lines at the end of `close()` so tests can free the gyro and the field t
 ```
 
 ## 8. Build and test
+
+**Run** the full build:
 
 ```bash
 ./gradlew build
@@ -125,7 +127,7 @@ You will see: `BUILD SUCCESSFUL`, and the four drivetrain tests still pass. Comm
 
 ## 9. Be the sensor, in the simulator
 
-On a laptop, check out your branch and run `./gradlew simulateJava` as in Session 4. The robot can stay **Disabled**: `periodic()` runs in every mode, so odometry updates anyway.
+On a laptop, check out your branch and **run** `./gradlew simulateJava` as in Session 4. The robot can stay **Disabled**: `periodic()` runs in every mode, so odometry updates anyway.
 
 1. Find the **Encoders** panel. It lists `Encoder[4,5]` and `Encoder[6,7]`.
 2. Type `10` into the **Distance** field of both.
@@ -136,7 +138,7 @@ Next, find **Other Devices** and expand **Gyro:RomiGyro**. Type `90` into `angle
 
 You will see: `Drive/headingDeg` reads 90 and the robot's rotation in `Field/Robot` changes.
 
-You just tested odometry without a robot. [Logs and AdvantageScope](logs.md) draws it on a field.
+You just tested odometry without a robot. [Logs and AdvantageScope](logs.md) draws it on a field. If the drawing leaves you wanting more, that is the [challenge](challenge.md).
 
 ## ✅ Done when
 

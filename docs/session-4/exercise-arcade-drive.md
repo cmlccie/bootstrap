@@ -4,7 +4,9 @@ Write the command that drives the Romi from the sticks, make it the drivetrain's
 
 ## 1. Create the command file
 
-In the Explorer, right-click `src/main/java/frc/robot/commands` and choose **New File...**. If the `commands` folder does not exist, right-click `frc/robot`, choose **New Folder...**, name it `commands`, then create the file inside it. Name the file `ArcadeDriveCommand.java` and type:
+In the Explorer, right-click `src/main/java/frc/robot` and choose **New Folder...**. Name it `commands`. Right-click the new folder, choose **New File...**, and name it `ArcadeDriveCommand.java`.
+
+**Create** the file with this whole block. It is the first class you write from scratch, so type it rather than pasting it:
 
 ```java title="src/main/java/frc/robot/commands/ArcadeDriveCommand.java"
 package frc.robot.commands;
@@ -21,6 +23,13 @@ public class ArcadeDriveCommand extends Command {
   private final DoubleSupplier m_forwardAxis;
   private final DoubleSupplier m_rotationAxis;
 
+  /**
+   * Creates the command.
+   *
+   * @param drivetrain the drivetrain to drive
+   * @param forwardAxis where to read the forward/back stick value each loop
+   * @param rotationAxis where to read the left/right stick value each loop
+   */
   public ArcadeDriveCommand(
       RomiDrivetrain drivetrain, DoubleSupplier forwardAxis, DoubleSupplier rotationAxis) {
     m_drivetrain = drivetrain;
@@ -57,11 +66,11 @@ public class ArcadeDriveCommand extends Command {
 
 Read it once more before moving on. Three attributes, one constructor that fills them, three methods the scheduler calls.
 
-Run `./gradlew build`. You will see: `BUILD SUCCESSFUL`. The command exists but nothing uses it yet.
+**Run** `./gradlew build`. You will see: `BUILD SUCCESSFUL`. The command exists but nothing uses it yet.
 
 ## 2. Create the controller
 
-Open `src/main/java/frc/robot/RobotContainer.java`. Add these imports with the others:
+Open `src/main/java/frc/robot/RobotContainer.java`. **Add** these four imports below the other `import` lines:
 
 ```java
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
@@ -70,7 +79,7 @@ import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.ArcadeDriveCommand;
 ```
 
-Add the controller as an attribute, below the two subsystems:
+**Add** the controller as an attribute, directly below the two subsystem attributes (`m_drivetrain` and `m_signalLight`):
 
 ```java
   // The driver's controller, plugged into USB port 0 on the Driver Station.
@@ -80,7 +89,7 @@ Add the controller as an attribute, below the two subsystems:
 
 ## 3. Make driving the default
 
-In `configureButtonBindings()`, add the default command first:
+`configureButtonBindings()` already has one line in it: the button A trigger. **Add** this block above that line, as the first thing in the method:
 
 ```java
     // Default: drive from the sticks whenever nothing else needs the drivetrain.
@@ -92,7 +101,7 @@ In `configureButtonBindings()`, add the default command first:
 
 ## 4. Bind two buttons
 
-Below the default command:
+**Add** this block directly below the default command, still above the button A trigger:
 
 ```java
     // Hold the right bumper for half speed. While held, this command replaces the default one.
@@ -115,7 +124,36 @@ Below the default command:
 - `whileTrue` runs the command while the button is held and stops it on release. When the slow-mode command stops, the scheduler restarts the default command by itself.
 - `startEnd` builds a small command from two lambdas: one to run at the start, one at the end. No new class needed for two one-liners.
 
-Run `./gradlew build`. You will see: `BUILD SUCCESSFUL`.
+*Read only*, the finished method for checking against yours:
+
+```java
+  private void configureButtonBindings() {
+    // Default: drive from the sticks whenever nothing else needs the drivetrain.
+    m_drivetrain.setDefaultCommand(
+        new ArcadeDriveCommand(m_drivetrain, m_controller::getLeftY, m_controller::getRightX));
+
+    // Hold the right bumper for half speed. While held, this command replaces the default one.
+    m_controller
+        .rightBumper()
+        .whileTrue(
+            new ArcadeDriveCommand(
+                m_drivetrain,
+                () -> m_controller.getLeftY() * DriveConstants.kSlowModeFactor,
+                () -> m_controller.getRightX() * DriveConstants.kSlowModeFactor));
+
+    // Hold A on the controller to light the green LED on the Romi.
+    m_controller
+        .a()
+        .whileTrue(
+            m_signalLight.startEnd(
+                () -> m_signalLight.setGreen(true), () -> m_signalLight.setGreen(false)));
+
+    // Pressing button A on the Romi's control board prints a message.
+    new Trigger(m_signalLight::isButtonAPressed).onTrue(Commands.print("Romi button A pressed"));
+  }
+```
+
+**Run** `./gradlew build`. You will see: `BUILD SUCCESSFUL`.
 
 ## 5. Commit and push
 

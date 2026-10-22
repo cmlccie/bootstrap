@@ -22,13 +22,13 @@ You will see: the line jumps to the new value. Type a few values and you get a s
 
 Click the **+** to add an **Odometry** tab (it may be called **2D Field**). Drag `SmartDashboard/Field/Robot` onto the robot slot.
 
-You will see: a field with a robot on it. Change the encoder distance and the gyro angle in the Sim GUI and the robot moves and turns.
+You will see: a field with a robot on it. Change the encoder distance and the gyro angle in the Sim GUI and the robot moves and turns. It moves less than you expect: the field is 16 meters long and the Romi is tiny. The [challenge](challenge.md) is about fixing that.
 
 ## 5. Open a log file
 
 Every time the program ran, `DataLogManager` wrote a file. Choose **File → Open Log(s)** and pick the newest file in the project's `logs/` folder.
 
-You will see: the same field tree, but now with a timeline. Scrub the playhead. Your `Entered Disabled` and `Heartbeat` lines from Session 2 are under **messages**. Every `SmartDashboard` value you published is there too, because `DataLogManager` records NetworkTables by default.
+You will see: the same field tree, but now with a timeline. Scrub the playhead. The `Entered Disabled` and `Heartbeat` lines from Session 2's exercise are under **messages**; they have been on `main` since the mentor merged them. Every `SmartDashboard` value you published is there too, because `DataLogManager` records NetworkTables by default.
 
 !!! info "On the real robot"
 

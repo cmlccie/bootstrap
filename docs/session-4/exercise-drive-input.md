@@ -4,9 +4,15 @@ Fill in the three methods in `DriveInput` until `DriveInputTest` passes. This is
 
 Before you start, do steps 0-2 of [The Routine](../session-2/routine.md): refresh `main`, then branch `yourname/session-4`.
 
+!!! note "What is new on `main`"
+
+    `RslLogic` is finished and its tests are on. `RobotContainer` has the button A trigger from Session 3's stretch. Both came in when a mentor merged Session 3 into `main`.
+
 ## 1. Turn the tests on
 
-Open `src/test/java/frc/robot/DriveInputTest.java`. Read the five tests. Each one is a sentence about how the sticks should behave. Then delete the `@Disabled(...)` line and the `import org.junit.jupiter.api.Disabled;` line. Save.
+Open `src/test/java/frc/robot/DriveInputTest.java`. Read the five tests. Each one is a sentence about how the sticks should behave. Then **delete** the `@Disabled(...)` line and the `import org.junit.jupiter.api.Disabled;` line. Save.
+
+**Run** the tests:
 
 ```bash
 ./gradlew test
@@ -16,7 +22,7 @@ You will see: `BUILD FAILED` with four failing tests. The stubs return `0.0` for
 
 ## 2. Deadband
 
-Open `src/main/java/frc/robot/DriveInput.java`. Replace the body of `applyDeadband`:
+Open `src/main/java/frc/robot/DriveInput.java`. Each of the three methods has a `TODO` comment and a `return 0.0;`. In `applyDeadband`, **replace** those two lines so the method reads:
 
 ```java title="src/main/java/frc/robot/DriveInput.java"
   public static double applyDeadband(double rawAxis) {
@@ -27,11 +33,11 @@ Open `src/main/java/frc/robot/DriveInput.java`. Replace the body of `applyDeadba
   }
 ```
 
-Run `./gradlew test`. You will see: `valuesPastTheDeadbandPassThrough` now passes. Three failures left.
+**Run** `./gradlew test`. You will see: `valuesPastTheDeadbandPassThrough` now passes. Three failures left.
 
 ## 3. Forward
 
-Pushing forward reads `-1.0`. Flip it, after cleaning it up:
+Pushing forward reads `-1.0`. Flip it, after cleaning it up. In `forwardSpeed`, **replace** the `TODO` line and `return 0.0;` with one line, so the method reads:
 
 ```java
   public static double forwardSpeed(double rawAxis) {
@@ -39,11 +45,11 @@ Pushing forward reads `-1.0`. Flip it, after cleaning it up:
   }
 ```
 
-Run `./gradlew test`. You will see: one failure left, `pushingRightTurnsClockwise`.
+**Run** `./gradlew test`. You will see: one failure left, `pushingRightTurnsClockwise`.
 
 ## 4. Rotation
 
-`arcadeDrive` treats counterclockwise as positive, and pushing the stick right is positive. So right must become negative, the same flip:
+`arcadeDrive` treats counterclockwise as positive, and pushing the stick right is positive. So right must become negative, the same flip. In `rotationSpeed`, **replace** the `TODO` line and `return 0.0;` so the method reads:
 
 ```java
   public static double rotationSpeed(double rawAxis) {
@@ -51,7 +57,7 @@ Run `./gradlew test`. You will see: one failure left, `pushingRightTurnsClockwis
   }
 ```
 
-Run `./gradlew test`. You will see: `BUILD SUCCESSFUL`.
+**Run** `./gradlew test`. You will see: `BUILD SUCCESSFUL`.
 
 ## 5. Commit
 

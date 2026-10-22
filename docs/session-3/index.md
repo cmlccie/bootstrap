@@ -14,7 +14,8 @@ By the end of this session you will be able to:
 
 ## ✅ Before you arrive
 
-- [ ] Session 2's branch is pushed. Today starts from a fresh `main`.
+- [ ] Session 2's branch is pushed. Today starts from a fresh `main`, which already has Session 2's exercise in it.
+- [ ] Mentors: `solution/session-2` is merged into `main`.
 
 ## 🗓️ Agenda
 
@@ -27,7 +28,7 @@ By the end of this session you will be able to:
 | 0:35 | Booleans and conditionals: the RSL rule in English, then in Java | [Conditionals](conditionals.md) |
 | 0:45 | Exercise: make the RSL tests pass | [Exercise: The RSL](exercise-rsl.md) |
 | 1:05 | Commit, push, stop your Codespace | [The Routine](../session-2/routine.md) |
-| 1:10 | Wrap up: what Session 4 adds | |
+| 1:10 | Wrap up: what Session 4 adds. The challenge is for home | [Challenge: SOS](challenge.md) |
 
 !!! tip "Mentor pacing note"
 
@@ -37,6 +38,10 @@ By the end of this session you will be able to:
 
 1. [The Routine](../session-2/routine.md) - refresh `main` and create `yourname/session-3`.
 2. [Exercise: The RSL](exercise-rsl.md) - enable the tests, watch them fail, write `shouldBeOn`, watch them pass, push.
+
+## 🏆 Challenge (optional)
+
+[SOS](challenge.md) - make the red LED flash SOS in Morse code while the robot is disabled. Pure logic, a pin to reconfigure, and a test of your own.
 
 ## 📚 Reference
 

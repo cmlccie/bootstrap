@@ -4,7 +4,7 @@ Simulator first. The Romi second. Same order as always.
 
 ## 1. Simulator: pick a routine
 
-On a laptop, check out your branch and run `./gradlew simulateJava`.
+On a laptop, check out your branch and **run** `./gradlew simulateJava`.
 
 1. Open the **NetworkTables** panel and expand **SmartDashboard → Auto**. Set **selected** to `L shape`.
 2. In **Robot State**, click **Autonomous**.
@@ -43,7 +43,7 @@ Next, click **Disabled**, select **L shape**, and click **Autonomous**.
 
 You will see: a foot forward, a left turn, a foot forward. If it turns right, the gyro sign is wrong: `kGyroReversed` from Session 5.
 
-Finally, run your own routine.
+Finally, run your own routine. Then it is time for the [challenge](challenge.md).
 
 ## 4. Tune one number
 
@@ -56,6 +56,7 @@ You can now read any command-based FRC robot's code and know where to look. To k
 - **Read the WPILib docs** at [docs.wpilib.org](https://docs.wpilib.org/en/stable/). Start with the command-based section. You have already used most of it.
 - **Replace bang-bang with PID.** `PIDController` and `ProfiledPIDCommand` make `DriveDistance` stop where it should.
 - **Look at last season's robot code** in the team's repositories. Find the subsystems. Find `RobotContainer`. It is the same shape.
+- **Capstone 2** puts a [robot arm](../arm/index.md) on the Romi, and nobody walks you through it.
 - **Pull requests and code review** are next. A mentor will walk you through opening one on the branch you pushed today.
 
 ## ✅ Done when

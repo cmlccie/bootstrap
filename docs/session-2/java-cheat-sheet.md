@@ -1,6 +1,6 @@
 # Java Cheat Sheet
 
-This page grows one section per session. Bookmark it.
+This page grows one section per session. Bookmark it. The long version, with every piece of syntax in the repository and where it appears, is [Java Syntax](../reference/java-syntax.md).
 
 ## Session 2: reading and writing statements
 
@@ -155,3 +155,19 @@ if (DriveConstants.kGyroReversed) {         // a boolean constant as a switch
   degrees = -degrees;
 }
 ```
+
+## Capstones: loops and chains
+
+```java
+for (int i = 0; i < sides; i++) {           // start at 0, keep going while i < sides, add one each pass
+  routine = routine.andThen(new DriveDistance(0.5, sideInch, m_drivetrain));
+}
+```
+
+| You write | It means |
+| --------- | -------- |
+| `Commands.sequence(a, b, c)` | `a`, then `b`, then `c` |
+| `a.andThen(b)` | The same, built one piece at a time |
+| `Commands.waitSeconds(1.0)` | Nothing, for a second |
+| `cmd.withTimeout(3.0)` | `cmd`, but stop after three seconds |
+| `m_arm.runOnce(() -> m_arm.setLift(0.8))` | A one-shot command from a lambda |

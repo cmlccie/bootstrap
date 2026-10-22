@@ -2,7 +2,11 @@
 
 `ArcadeDriveCommand` never finishes; a button interrupts it. An autonomous command is the opposite: it decides for itself when it is done, by watching a sensor. Two of them cover most of what a Romi can do.
 
-Before you start, do steps 0-2 of [The Routine](../session-2/routine.md): refresh `main`, then branch `yourname/session-6`.
+Before you start, do steps 0-2 of [The Routine](../../session-2/routine.md): refresh `main`, then branch `yourname/capstone-1`.
+
+!!! note "What is new on `main`"
+
+    `RomiDrivetrain` has the gyro, odometry, `getAverageDistanceInch()`, and `getGyroAngleDegrees()` from Session 5. Both commands below depend on them.
 
 ## 🔁 The command lifecycle, complete
 
@@ -15,7 +19,7 @@ Before you start, do steps 0-2 of [The Routine](../session-2/routine.md): refres
 
 ## 1. `DriveDistance`
 
-Create `src/main/java/frc/robot/commands/DriveDistance.java`:
+**Create** the file `src/main/java/frc/robot/commands/DriveDistance.java` with this whole block:
 
 ```java title="src/main/java/frc/robot/commands/DriveDistance.java"
 package frc.robot.commands;
@@ -32,6 +36,13 @@ public class DriveDistance extends Command {
   // Where the wheels were when the command started.
   private double m_startInch;
 
+  /**
+   * Creates the command.
+   *
+   * @param speed forward speed, 0.0 to 1.0
+   * @param distanceInch how far to drive, in inches
+   * @param drivetrain the drivetrain to drive
+   */
   public DriveDistance(double speed, double distanceInch, RomiDrivetrain drivetrain) {
     m_speed = speed;
     m_distanceInch = distanceInch;
@@ -73,7 +84,7 @@ Two things to notice:
 
 ## 2. `TurnDegrees`
 
-Create `src/main/java/frc/robot/commands/TurnDegrees.java`:
+**Create** the file `src/main/java/frc/robot/commands/TurnDegrees.java` with this whole block:
 
 ```java title="src/main/java/frc/robot/commands/TurnDegrees.java"
 package frc.robot.commands;
@@ -90,6 +101,13 @@ public class TurnDegrees extends Command {
   // The heading when the command started.
   private double m_startDegrees;
 
+  /**
+   * Creates the command.
+   *
+   * @param speed turning speed, 0.0 to 1.0
+   * @param degrees how far to turn; positive is counterclockwise (left), negative is clockwise
+   * @param drivetrain the drivetrain to turn
+   */
   public TurnDegrees(double speed, double degrees, RomiDrivetrain drivetrain) {
     m_speed = speed;
     m_degrees = degrees;
@@ -128,6 +146,8 @@ public class TurnDegrees extends Command {
 Positive degrees turn left (counterclockwise), because `arcadeDrive` treats positive rotation as counterclockwise. `Math.abs` on both sides makes the finish check work for either direction.
 
 ## 3. Build
+
+**Run** the build:
 
 ```bash
 ./gradlew build

@@ -1,6 +1,6 @@
 # Logging: Seeing What the Robot Is Thinking
 
-A robot has no screen. Logging is how the code tells you what it is doing. You will use it every time something does not work.
+A robot has no screen. Logging is how the code tells you what it is doing. You will use it every time something does not work. The blocks on this page are examples to *read*. The exercise tells you exactly where each line goes.
 
 ## 🖨️ Two ways to log
 

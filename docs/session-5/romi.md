@@ -36,14 +36,16 @@ You will see: the Romi's web page. The **Romi** tab shows the board is connected
 
 ## 2. Check out your branch
 
+**Run** these on the laptop, with your branch name, before joining the Romi's network:
+
 ```bash
 git fetch origin
 git checkout yourname/session-5
 ```
 
-Do this before joining the Romi's network.
-
 ## 3. Run
+
+**Run** the robot program:
 
 ```bash
 ./gradlew simulateJava
@@ -51,14 +53,14 @@ Do this before joining the Romi's network.
 
 You will see: the Sim GUI opens as usual, and the terminal prints a line like `HALSimWS: WebSocket Connected`. That is the link to the Romi. If it prints connection errors instead, check the Wi-Fi.
 
-The yellow LED on the Romi is solid. That is your Session 3 code, in Disabled mode.
+The yellow LED on the Romi is solid. That is the Session 3 RSL rule, in Disabled mode. Challenge solutions never reach `main`, so if you want to see your SOS on the real red LED, check out your `yourname/session-3` branch on this laptop.
 
 ## 4. Drive
 
 1. Drag the controller onto Joystick[0].
 2. Click **Teleoperated** in Robot State.
 
-You will see: the yellow LED starts blinking. Push the left stick forward, gently. The Romi drives. Right stick turns it. Hold the right bumper: slower. Hold A: the green LED lights.
+You will see: the yellow LED starts blinking. Push the left stick forward, gently. The Romi drives. Right stick turns it. Hold the right bumper: slower. Hold A: the green LED lights. All of that is Session 4's code, which came to `main` when the mentor merged it. Did the Session 4 challenge? Check out `yourname/session-4` on this laptop, press its button, and watch the Romi turn around. Now is the time to tune its constant, in your Codespace, on that branch.
 
 Put the Romi on the floor or a large table with someone spotting it. It is quick.
 

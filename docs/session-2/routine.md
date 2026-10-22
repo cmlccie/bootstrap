@@ -20,7 +20,7 @@ You will see: no number badge on the icon. If there is a badge, you have leftove
 
 ## 1. Refresh main
 
-Your Codespace remembers whatever branch you used last time. Other people (and your mentors) have pushed new code since then. Start from the newest `main`.
+Your Codespace remembers whatever branch you used last time. Since then, a mentor has merged last session's finished exercise into `main`. Start from the newest `main` and you start from a working robot, whether or not you finished last time.
 
 1. Click the branch name in the bottom-left of the status bar.
 2. Pick **main** from the list.
@@ -50,6 +50,8 @@ Never edit `main`. Make your own branch for today's work.
     ```
 
 You will see: the status bar now shows your new branch name. VS Code creates the branch from whatever branch you were on, which is why step 1 comes first.
+
+Use the session number in the name: `yourname/session-2` today, `yourname/session-3` next time. A challenge goes on the same branch as the session's exercise.
 
 !!! tip "Terminal version"
 
@@ -97,7 +99,11 @@ Click **Publish Branch** (or **Sync Changes** if you already published this bran
 
 You will see: a notification that the branch was published. Check on GitHub: your branch appears in the branch dropdown of the [`2026-bootcamp` repository](https://github.com/gryphoncommand/2026-bootcamp) with your commit on top.
 
-That is the end of the routine. A mentor merges finished work into `main`. Pull requests and code review come after the bootcamp.
+That is the end of the routine. A mentor merges the finished exercise into `main` before the next session. Pull requests and code review come after the bootcamp.
+
+!!! info "Where did my code go?"
+
+    Next session you refresh `main` and branch again, and your branch from today is not part of it. That is on purpose. Your branch is still on GitHub, with your name on it, forever. `main` has the same exercise done the reference way, so everyone starts the next session from the same place. That is how a real team works: `main` is the team's code, branches are yours.
 
 ## 🛑 Before you leave
 
