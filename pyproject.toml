@@ -7,7 +7,7 @@ authors = [{ name = "Chris Lunsford", email = "cm@lunsford.io" }]
 requires-python = ">=3.13"
 dependencies = [
     "mkdocs>=1.6.1,<2",
-    "mkdocs-material[recommended]>=9.7.7",
+    "mkdocs-material[recommended]>=9.8.0",
     "mkdocs-open-in-new-tab>=1.0.8",
 ]
 
