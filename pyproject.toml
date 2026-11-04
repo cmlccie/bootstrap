@@ -7,12 +7,12 @@ authors = [{ name = "Chris Lunsford", email = "cm@lunsford.io" }]
 requires-python = ">=3.13"
 dependencies = [
     "mkdocs>=1.6.1,<2",
-    "mkdocs-material[recommended]>=9.7.7",
+    "mkdocs-material[recommended]>=9.8.0",
     "mkdocs-open-in-new-tab>=1.0.8",
 ]
 
 [dependency-groups]
-dev = ["ruff>=0.16.8"]
+dev = ["ruff>=0.17.3"]
 
 [tool.uv]
 package = false
